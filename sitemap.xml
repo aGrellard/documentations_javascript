@@ -6,6 +6,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://agrellard.github.io/documentations_javascript/Array/arraymap/</loc>
+         <lastmod>2024-06-23</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://agrellard.github.io/documentations_javascript/Array/concat/</loc>
          <lastmod>2024-06-23</lastmod>
          <changefreq>daily</changefreq>
@@ -37,11 +42,6 @@
     </url>
     <url>
          <loc>https://agrellard.github.io/documentations_javascript/Array/innerHTML/</loc>
-         <lastmod>2024-06-23</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://agrellard.github.io/documentations_javascript/Array/map-v1/</loc>
          <lastmod>2024-06-23</lastmod>
          <changefreq>daily</changefreq>
     </url>
