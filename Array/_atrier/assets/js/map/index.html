@@ -1,0 +1,2570 @@
+
+<!doctype html>
+<html lang="fr" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Documentation pour linux">
+      
+      
+        <meta name="author" content="aGrellard">
+      
+      
+        <link rel="canonical" href="https://agrellard.github.io/documentations_linux/Array/_atrier/assets/js/map/">
+      
+      
+        <link rel="prev" href="../filter/">
+      
+      
+        <link rel="next" href="../reduce/">
+      
+      
+      <link rel="icon" href="../../../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.27">
+    
+    
+      
+        <title>la fonction map - DocuLinux</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../../assets/stylesheets/main.6543a935.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+    
+    
+      <link rel="stylesheet" href="../../../../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="lime" data-md-color-accent="amber">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#la-fonction-map" class="md-skip">
+          Aller au contenu
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="En-tête">
+    <a href="../../../../.." title="DocuLinux" class="md-header__button md-logo" aria-label="DocuLinux" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M392.8 1.2c-17-4.9-34.7 5-39.6 22l-128 448c-4.9 17 5 34.7 22 39.6s34.7-5 39.6-22l128-448c4.9-17-5-34.7-22-39.6zm80.6 120.1c-12.5 12.5-12.5 32.8 0 45.3l89.3 89.4-89.4 89.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l112-112c12.5-12.5 12.5-32.8 0-45.3l-112-112c-12.5-12.5-32.8-12.5-45.3 0zm-306.7 0c-12.5-12.5-32.8-12.5-45.3 0l-112 112c-12.5 12.5-12.5 32.8 0 45.3l112 112c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256l89.4-89.4c12.5-12.5 12.5-32.8 0-45.3z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            DocuLinux
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              la fonction map
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="lime" data-md-color-accent="amber"  aria-label="Basculer en mode sombre"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Basculer en mode sombre" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5c-.84 0-1.65.15-2.39.42L12 2M3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29L3.34 7m.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14L3.36 17M20.65 7l-1.77 3.79a7.023 7.023 0 0 0-2.38-4.15l4.15.36m-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29L20.64 17M12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44L12 22Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="amber" data-md-color-accent="lime"  aria-label="Basculer en mode clair"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Basculer en mode clair" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3 3.19.09m3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95 2.06.05m-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Rechercher" placeholder="Rechercher" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Recherche">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Effacer" aria-label="Effacer" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initialisation de la recherche
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/aGrellard/documentations_linux" title="Aller au dépôt" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M186.1 328.7c0 20.9-10.9 55.1-36.7 55.1s-36.7-34.2-36.7-55.1 10.9-55.1 36.7-55.1 36.7 34.2 36.7 55.1zM480 278.2c0 31.9-3.2 65.7-17.5 95-37.9 76.6-142.1 74.8-216.7 74.8-75.8 0-186.2 2.7-225.6-74.8-14.6-29-20.2-63.1-20.2-95 0-41.9 13.9-81.5 41.5-113.6-5.2-15.8-7.7-32.4-7.7-48.8 0-21.5 4.9-32.3 14.6-51.8 45.3 0 74.3 9 108.8 36 29-6.9 58.8-10 88.7-10 27 0 54.2 2.9 80.4 9.2 34-26.7 63-35.2 107.8-35.2 9.8 19.5 14.6 30.3 14.6 51.8 0 16.4-2.6 32.7-7.7 48.2 27.5 32.4 39 72.3 39 114.2zm-64.3 50.5c0-43.9-26.7-82.6-73.5-82.6-18.9 0-37 3.4-56 6-14.9 2.3-29.8 3.2-45.1 3.2-15.2 0-30.1-.9-45.1-3.2-18.7-2.6-37-6-56-6-46.8 0-73.5 38.7-73.5 82.6 0 87.8 80.4 101.3 150.4 101.3h48.2c70.3 0 150.6-13.4 150.6-101.3zm-82.6-55.1c-25.8 0-36.7 34.2-36.7 55.1s10.9 55.1 36.7 55.1 36.7-34.2 36.7-55.1-10.9-55.1-36.7-55.1z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    documentations_linux
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Onglets" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../../Infinity/" class="md-tabs__link">
+        
+  
+    
+  
+  Infinity
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../../async_await/" class="md-tabs__link">
+        
+  
+    
+  
+  async et await
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../../fonctions_1/" class="md-tabs__link">
+        
+  
+    
+  
+  Fonctions 1
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../../fonctions_2/" class="md-tabs__link">
+        
+  
+    
+  
+  Fonctions 2
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../../lodash/" class="md-tabs__link">
+        
+  
+    
+  
+  Lodash
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../../promise_VS_async/" class="md-tabs__link">
+        
+  
+    
+  
+  promise VS async
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../../promise_callback/" class="md-tabs__link">
+        
+  
+    
+  
+  Promise callback
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../../setTimeout/" class="md-tabs__link">
+        
+  
+    
+  
+  setTimeout
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../../window.onload_DOMContentLoaded/" class="md-tabs__link">
+        
+  
+    
+  
+  window.onload DOMContentLoaded
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../../../Array_Method/" class="md-tabs__link">
+          
+  
+  Array
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../String/indexOf/" class="md-tabs__link">
+          
+  
+  String
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../fetch/fetch_description/" class="md-tabs__link">
+          
+  
+  Fetch
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../regexp/caracteres/" class="md-tabs__link">
+          
+  
+  Regexp
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../../.." title="DocuLinux" class="md-nav__button md-logo" aria-label="DocuLinux" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M392.8 1.2c-17-4.9-34.7 5-39.6 22l-128 448c-4.9 17 5 34.7 22 39.6s34.7-5 39.6-22l128-448c4.9-17-5-34.7-22-39.6zm80.6 120.1c-12.5 12.5-12.5 32.8 0 45.3l89.3 89.4-89.4 89.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l112-112c12.5-12.5 12.5-32.8 0-45.3l-112-112c-12.5-12.5-32.8-12.5-45.3 0zm-306.7 0c-12.5-12.5-32.8-12.5-45.3 0l-112 112c-12.5 12.5-12.5 32.8 0 45.3l112 112c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256l89.4-89.4c12.5-12.5 12.5-32.8 0-45.3z"/></svg>
+
+    </a>
+    DocuLinux
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/aGrellard/documentations_linux" title="Aller au dépôt" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M186.1 328.7c0 20.9-10.9 55.1-36.7 55.1s-36.7-34.2-36.7-55.1 10.9-55.1 36.7-55.1 36.7 34.2 36.7 55.1zM480 278.2c0 31.9-3.2 65.7-17.5 95-37.9 76.6-142.1 74.8-216.7 74.8-75.8 0-186.2 2.7-225.6-74.8-14.6-29-20.2-63.1-20.2-95 0-41.9 13.9-81.5 41.5-113.6-5.2-15.8-7.7-32.4-7.7-48.8 0-21.5 4.9-32.3 14.6-51.8 45.3 0 74.3 9 108.8 36 29-6.9 58.8-10 88.7-10 27 0 54.2 2.9 80.4 9.2 34-26.7 63-35.2 107.8-35.2 9.8 19.5 14.6 30.3 14.6 51.8 0 16.4-2.6 32.7-7.7 48.2 27.5 32.4 39 72.3 39 114.2zm-64.3 50.5c0-43.9-26.7-82.6-73.5-82.6-18.9 0-37 3.4-56 6-14.9 2.3-29.8 3.2-45.1 3.2-15.2 0-30.1-.9-45.1-3.2-18.7-2.6-37-6-56-6-46.8 0-73.5 38.7-73.5 82.6 0 87.8 80.4 101.3 150.4 101.3h48.2c70.3 0 150.6-13.4 150.6-101.3zm-82.6-55.1c-25.8 0-36.7 34.2-36.7 55.1s10.9 55.1 36.7 55.1 36.7-34.2 36.7-55.1-10.9-55.1-36.7-55.1z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    documentations_linux
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../Infinity/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Infinity
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../async_await/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    async et await
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../fonctions_1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Fonctions 1
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../fonctions_2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Fonctions 2
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../lodash/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lodash
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../promise_VS_async/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    promise VS async
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../promise_callback/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Promise callback
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../setTimeout/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    setTimeout
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../window.onload_DOMContentLoaded/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    window.onload DOMContentLoaded
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Array
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_10">
+            <span class="md-nav__icon md-icon"></span>
+            Array
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Array_Method/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Array Method
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../concat/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Concat
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../every/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Every
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../filter/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Filter
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../find/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Find
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../from/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    From
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../indexOf/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    indexOf
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../innerHTML/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    innerHTML
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../map-2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Map 2
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../map/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Contenu
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../reduce/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Reduce
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../slice/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Slice
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../some/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Some
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../sort/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Sort
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../splice/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Splice
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../spread/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Spread
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../tri_fusion/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tri fusion
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10_18" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_10_18" id="__nav_10_18_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+     atrier
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_10_18_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_10_18">
+            <span class="md-nav__icon md-icon"></span>
+             atrier
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10_18_1" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_10_18_1" id="__nav_10_18_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Assets
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_10_18_1_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_10_18_1">
+            <span class="md-nav__icon md-icon"></span>
+            Assets
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10_18_1_1" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_10_18_1_1" id="__nav_10_18_1_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Js
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_10_18_1_1_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_10_18_1_1">
+            <span class="md-nav__icon md-icon"></span>
+            Js
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../filter/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Filter
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    la fonction map
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    la fonction map
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#syntaxe-de-base" class="md-nav__link">
+    <span class="md-ellipsis">
+      Syntaxe de base :
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fonctionnement-de-map" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fonctionnement de map() :
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exemple-dutilisation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exemple d'Utilisation :
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#points-importants" class="md-nav__link">
+    <span class="md-ellipsis">
+      Points Importants :
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#thisarg" class="md-nav__link">
+    <span class="md-ellipsis">
+      thisArg :
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="thisArg :">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exemple-sans-thisarg" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exemple sans thisArg :
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exemple-avec-thisarg" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exemple avec thisArg :
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#points-importants_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Points Importants :
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#utilisation-de-thisarg" class="md-nav__link">
+    <span class="md-ellipsis">
+      utilisation de thisArg
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="utilisation de thisArg">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-acces-aux-proprietes-de-lobjet-dans-la-fonction-de-rappel" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Accès aux Propriétés de l'Objet dans la Fonction de Rappel
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-utilisation-dans-les-methodes-de-classe" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Utilisation dans les Méthodes de Classe
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-modification-du-comportement-de-la-fonction-de-rappel" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Modification du Comportement de la Fonction de Rappel
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-utilisation-avec-des-objets-litteraux" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Utilisation avec des Objets Littéraux
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#points-importants_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Points Importants :
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#utilisation-de-index-et-array" class="md-nav__link">
+    <span class="md-ellipsis">
+      Utilisation de index et array :
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Utilisation de index et array :">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#utilisation-de-index" class="md-nav__link">
+    <span class="md-ellipsis">
+      Utilisation de index :
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#utilisation-de-array" class="md-nav__link">
+    <span class="md-ellipsis">
+      Utilisation de array :
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#points-importants_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Points Importants :
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1-utilisation-de-index" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Utilisation de index :
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-utilisation-de-array" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Utilisation de array :
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-combinant-index-et-array" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Combinant index et array :
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#combiner-lutilisation-de-lindice-et-du-tableau-entier" class="md-nav__link">
+    <span class="md-ellipsis">
+      Combiner l'utilisation de l'Indice et du Tableau Entier
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Combiner l'utilisation de l'Indice et du Tableau Entier">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-calculs-bases-sur-lindice-et-le-tableau-entier" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Calculs Basés sur l'Indice et le Tableau Entier
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-acces-aux-elements-adjacents" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Accès aux Éléments Adjacents
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-utiliser-lindice-pour-des-operations-conditionnelles" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Utiliser l'Indice pour des Opérations Conditionnelles
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-creer-des-structures-de-donnees-complexes" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Créer des Structures de Données Complexes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-utiliser-lindice-pour-controler-la-transformation" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Utiliser l'Indice pour Contrôler la Transformation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-references-croisees-dans-le-tableau" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Références Croisées dans le Tableau
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#utilisation-combinee-de-thisarg-index-et-array" class="md-nav__link">
+    <span class="md-ellipsis">
+      utilisation combinée de thisArg, index et array
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="utilisation combinée de thisArg, index et array">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-utilisation-de-thisarg-pour-acceder-aux-proprietes-dun-objet" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Utilisation de thisArg pour Accéder aux Propriétés d'un Objet :
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-utilisation-de-index-pour-des-transformations-basees-sur-la-position" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Utilisation de index pour des Transformations Basées sur la Position :
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-utilisation-de-array-pour-des-comparaisons-ou-des-calculs-globaux" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Utilisation de array pour des Comparaisons ou des Calculs Globaux :
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-combinaison-de-thisarg-index-et-array-pour-une-logique-complexe" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Combinaison de thisArg, index et array pour une Logique Complexe :
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reduce/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Reduce
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sort/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Sort
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tri_fusion/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tri fusion
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11" >
+        
+          
+          <label class="md-nav__link" for="__nav_11" id="__nav_11_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    String
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_11">
+            <span class="md-nav__icon md-icon"></span>
+            String
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../String/indexOf/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    indexOf
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../String/localCompare/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    localCompare
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../String/localCompare_2-en/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    localCompare 2 en
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../String/localCompare_2-fr/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    localCompare 2 fr
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_12" >
+        
+          
+          <label class="md-nav__link" for="__nav_12" id="__nav_12_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Fetch
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_12_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_12">
+            <span class="md-nav__icon md-icon"></span>
+            Fetch
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../fetch/fetch_description/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Fetch description
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../fetch/fetch_methode/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Fetch methode
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../fetch/fetch_status/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Fetch status
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../fetch/fetch_utilisations/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Fetch utilisations
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_13" >
+        
+          
+          <label class="md-nav__link" for="__nav_13" id="__nav_13_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Regexp
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_13_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_13">
+            <span class="md-nav__icon md-icon"></span>
+            Regexp
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../regexp/caracteres/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Caracteres
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../regexp/guide/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Guide sur l'utilisation des expressions régulières (Regex) en JavaScript
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+    
+      
+    
+    <a href="https://github.com/aGrellard/documentations_linux/raw/main/docs/Array/_atrier/assets/js/map.md" title="Consulter la source de cette page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0 8a5 5 0 0 1-5-5 5 5 0 0 1 5-5 5 5 0 0 1 5 5 5 5 0 0 1-5 5m0-12.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5Z"/></svg>
+    </a>
+  
+
+
+<h1 id="la-fonction-map">la fonction map<a class="headerlink" href="#la-fonction-map" title="Permanent link">&para;</a></h1>
+<p>La fonction <code>map()</code> en JavaScript est une méthode de prototype d'Array qui est utilisée pour transformer les éléments d'un tableau en appliquant une fonction à chaque élément du tableau. Cette méthode renvoie un nouveau tableau contenant les résultats de l'application de la fonction à chaque élément. Elle ne modifie pas le tableau original.</p>
+<h3 id="syntaxe-de-base">Syntaxe de base :<a class="headerlink" href="#syntaxe-de-base" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">nouveauTableau</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">tableauOriginal</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">element</span><span class="p">,</span><span class="w"> </span><span class="nx">index</span><span class="p">,</span><span class="w"> </span><span class="nx">array</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// Logique de transformation</span>
+<span class="p">},</span><span class="w"> </span><span class="nx">thisArg</span><span class="p">);</span>
+</code></pre></div>
+<ul>
+<li><strong>tableauOriginal</strong> : Le tableau sur lequel <code>map()</code> est appelé.</li>
+<li><strong>function(element, index, array)</strong> : La fonction de rappel exécutée sur chaque élément du tableau.</li>
+<li><strong>element</strong> : L'élément courant du tableau.</li>
+<li><strong>index</strong> (optionnel) : L'indice de l'élément courant dans le tableau.</li>
+<li><strong>array</strong> (optionnel) : Le tableau sur lequel <code>map()</code> a été appelé.</li>
+<li><strong>thisArg</strong> (optionnel) : La valeur à utiliser comme <code>this</code> lors de l'exécution de la fonction de rappel.</li>
+<li><strong>nouveauTableau</strong> : Le nouveau tableau résultant, contenant les éléments transformés.</li>
+</ul>
+<h3 id="fonctionnement-de-map">Fonctionnement de <code>map()</code> :<a class="headerlink" href="#fonctionnement-de-map" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>Itération sur le Tableau :</strong></li>
+<li>
+<p><code>map()</code> passe en revue chaque élément du tableau <code>tableauOriginal</code>.</p>
+</li>
+<li>
+<p><strong>Application de la Fonction de Rappel :</strong></p>
+</li>
+<li>
+<p>À chaque élément, la fonction de rappel est appelée, recevant l'élément courant, son indice et le tableau lui-même en tant qu'arguments.</p>
+</li>
+<li>
+<p><strong>Transformation des Éléments :</strong></p>
+</li>
+<li>
+<p>La fonction de rappel effectue une opération ou une transformation sur l'élément courant et renvoie un nouveau résultat.</p>
+</li>
+<li>
+<p><strong>Construction d'un Nouveau Tableau :</strong></p>
+</li>
+<li>
+<p>Les valeurs renvoyées par la fonction de rappel pour chaque élément sont rassemblées dans un nouveau tableau.</p>
+</li>
+<li>
+<p><strong>Renvoi du Nouveau Tableau :</strong></p>
+</li>
+<li>Une fois tous les éléments traités, le nouveau tableau transformé est renvoyé.</li>
+</ol>
+<h3 id="exemple-dutilisation">Exemple d'Utilisation :<a class="headerlink" href="#exemple-dutilisation" title="Permanent link">&para;</a></h3>
+<p>Supposons que nous ayons un tableau de nombres et que nous voulions créer un nouveau tableau avec le carré de chaque nombre :</p>
+<div class="highlight"><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">numbers</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="mf">2</span><span class="p">,</span><span class="w"> </span><span class="mf">3</span><span class="p">,</span><span class="w"> </span><span class="mf">4</span><span class="p">,</span><span class="w"> </span><span class="mf">5</span><span class="p">];</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">squares</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">numbers</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="nx">number</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">number</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nx">number</span><span class="p">);</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">squares</span><span class="p">);</span><span class="w"> </span><span class="c1">// [1, 4, 9, 16, 25]</span>
+</code></pre></div>
+<p>Dans cet exemple, <code>map()</code> est utilisé pour calculer le carré de chaque élément du tableau <code>numbers</code>. Le résultat est un nouveau tableau <code>squares</code> contenant ces carrés.</p>
+<h3 id="points-importants">Points Importants :<a class="headerlink" href="#points-importants" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>map()</code> est souvent utilisé pour transformer des données, notamment en manipulant des tableaux d'objets, en extrayant des sous-ensembles de données ou en convertissant des types de données.</li>
+<li>Contrairement à d'autres méthodes comme <code>forEach()</code>, <code>map()</code> renvoie toujours un nouveau tableau, ce qui le rend particulièrement utile dans la programmation fonctionnelle.</li>
+<li><code>map()</code> n'affecte pas la taille du tableau original, mais la valeur de chaque élément peut être transformée. Si aucun élément n'est transformé, le tableau résultant aura la même taille que le tableau original.</li>
+</ul>
+<p>La fonction <code>map()</code> en JavaScript est une méthode de l'objet Array qui permet de créer un nouveau tableau en transformant chaque élément du tableau original à l'aide d'une fonction de rappel. L'argument <code>thisArg</code> dans <code>map()</code> est un paramètre optionnel qui permet de spécifier le contexte (<code>this</code>) pour la fonction de rappel.</p>
+<p><br></p>
+<hr>
+
+<p><br></p>
+<ol>
+<li><strong>Transformation d'Éléments :</strong></li>
+<li>Modifier chaque élément d'un tableau.</li>
+<li>
+<p>Exemple : Doubler chaque nombre dans un tableau de nombres.
+     <div class="highlight"><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">numbers</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="mf">2</span><span class="p">,</span><span class="w"> </span><span class="mf">3</span><span class="p">];</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">doubled</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">numbers</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="nx">num</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">num</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">2</span><span class="p">);</span>
+</code></pre></div></p>
+</li>
+<li>
+<p><strong>Extraction de Propriétés d'Objets :</strong></p>
+</li>
+<li>Extraire une propriété spécifique de chaque objet dans un tableau d'objets.</li>
+<li>
+<p>Exemple : Obtenir un tableau des noms à partir d'un tableau d'utilisateurs.
+     <div class="highlight"><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">users</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[{</span><span class="nx">name</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Alice&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">age</span><span class="o">:</span><span class="w"> </span><span class="mf">25</span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="nx">name</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Bob&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">age</span><span class="o">:</span><span class="w"> </span><span class="mf">30</span><span class="p">}];</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">names</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">users</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="nx">user</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">user</span><span class="p">.</span><span class="nx">name</span><span class="p">);</span>
+</code></pre></div></p>
+</li>
+<li>
+<p><strong>Conversion de Types de Données :</strong></p>
+</li>
+<li>Transformer les types de données des éléments d'un tableau.</li>
+<li>
+<p>Exemple : Convertir un tableau de chaînes de caractères en nombres.
+     <div class="highlight"><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">stringNumbers</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;1&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;2&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;3&quot;</span><span class="p">];</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">numbers</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">stringNumbers</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="nb">Number</span><span class="p">);</span>
+</code></pre></div></p>
+</li>
+<li>
+<p><strong>Appliquer une Fonction Complexes :</strong></p>
+</li>
+<li>Appliquer une logique complexe ou une fonction personnalisée à chaque élément.</li>
+<li>
+<p>Exemple : Ajouter une nouvelle propriété à chaque objet dans un tableau.
+     <div class="highlight"><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">items</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[{</span><span class="nx">name</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;chair&quot;</span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="nx">name</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;table&quot;</span><span class="p">}];</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">itemsWithPrices</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">items</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="nx">item</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">({</span><span class="w"> </span><span class="p">...</span><span class="nx">item</span><span class="p">,</span><span class="w"> </span><span class="nx">price</span><span class="o">:</span><span class="w"> </span><span class="mf">100</span><span class="w"> </span><span class="p">}));</span>
+</code></pre></div></p>
+</li>
+<li>
+<p><strong>Création de Nouvelles Structures de Données :</strong></p>
+</li>
+<li>Générer un nouveau format ou une nouvelle structure de données à partir d'un tableau existant.</li>
+<li>
+<p>Exemple : Créer un tableau de messages à partir d'un tableau d'utilisateurs.
+     <div class="highlight"><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">users</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[{</span><span class="nx">name</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Alice&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">age</span><span class="o">:</span><span class="w"> </span><span class="mf">25</span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="nx">name</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Bob&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">age</span><span class="o">:</span><span class="w"> </span><span class="mf">30</span><span class="p">}];</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">messages</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">users</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="nx">user</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="sb">`Bonjour </span><span class="si">${</span><span class="nx">user</span><span class="p">.</span><span class="nx">name</span><span class="si">}</span><span class="sb">, vous avez </span><span class="si">${</span><span class="nx">user</span><span class="p">.</span><span class="nx">age</span><span class="si">}</span><span class="sb"> ans.`</span><span class="p">);</span>
+</code></pre></div></p>
+</li>
+<li>
+<p><strong>Combinaison avec d'autres Méthodes de Tableau :</strong></p>
+</li>
+<li>Chaîner <code>map()</code> avec d'autres méthodes de tableau pour des opérations plus complexes.</li>
+<li>
+<p>Exemple : Utiliser <code>map()</code> et <code>filter()</code> ensemble.
+     <div class="highlight"><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">numbers</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="mf">2</span><span class="p">,</span><span class="w"> </span><span class="mf">3</span><span class="p">,</span><span class="w"> </span><span class="mf">4</span><span class="p">,</span><span class="w"> </span><span class="mf">5</span><span class="p">];</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">doubledEvenNumbers</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">numbers</span><span class="p">.</span><span class="nx">filter</span><span class="p">(</span><span class="nx">num</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">num</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="mf">2</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="mf">0</span><span class="p">).</span><span class="nx">map</span><span class="p">(</span><span class="nx">num</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">num</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">2</span><span class="p">);</span>
+</code></pre></div></p>
+</li>
+<li>
+<p><strong>Mappage avec Index ou Tableau Complet :</strong></p>
+</li>
+<li>Utiliser l'indice de l'élément ou le tableau complet pour des opérations plus avancées.</li>
+<li>
+<p>Exemple : Utiliser l'indice pour modifier les éléments.
+     <div class="highlight"><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">items</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;first&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;second&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;third&quot;</span><span class="p">];</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">indexedItems</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">items</span><span class="p">.</span><span class="nx">map</span><span class="p">((</span><span class="nx">item</span><span class="p">,</span><span class="w"> </span><span class="nx">index</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="sb">`</span><span class="si">${</span><span class="nx">index</span><span class="si">}</span><span class="sb">: </span><span class="si">${</span><span class="nx">item</span><span class="si">}</span><span class="sb">`</span><span class="p">);</span>
+</code></pre></div></p>
+</li>
+<li>
+<p><strong>Opérations Mathématiques ou Algorithmiques :</strong></p>
+</li>
+<li>Effectuer des calculs complexes ou des algorithmes sur les éléments d'un tableau.</li>
+<li>Exemple : Calculer le carré de chaque nombre d'un tableau.
+     <div class="highlight"><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">numbers</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="mf">2</span><span class="p">,</span><span class="w"> </span><span class="mf">3</span><span class="p">,</span><span class="w"> </span><span class="mf">4</span><span class="p">];</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">squares</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">numbers</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="nx">num</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">num</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nx">num</span><span class="p">);</span>
+</code></pre></div></li>
+</ol>
+<p><code>map()</code> est une méthode de tableau très puissante qui est largement utilisée pour sa capacité à transformer facilement les éléments d'un tableau, tout en gardant le tableau original inchangé.</p>
+<p><br></p>
+<hr>
+
+<p><br></p>
+<h2 id="thisarg"><code>thisArg</code> :<a class="headerlink" href="#thisarg" title="Permanent link">&para;</a></h2>
+<p>L'argument <code>thisArg</code> est utilisé pour définir le contexte (<code>this</code>) dans lequel la fonction de rappel est exécutée. Cela peut être particulièrement utile lorsque vous souhaitez accéder à des propriétés ou des méthodes d'un objet spécifique dans votre fonction de rappel.</p>
+<h4 id="exemple-sans-thisarg">Exemple sans <code>thisArg</code> :<a class="headerlink" href="#exemple-sans-thisarg" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">numbers</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="mf">2</span><span class="p">,</span><span class="w"> </span><span class="mf">3</span><span class="p">,</span><span class="w"> </span><span class="mf">4</span><span class="p">,</span><span class="w"> </span><span class="mf">5</span><span class="p">];</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">squares</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">numbers</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">number</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nx">number</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nx">number</span><span class="p">;</span>
+<span class="p">});</span>
+</code></pre></div>
+<p>Dans cet exemple, la fonction de rappel calcule le carré de chaque nombre. <code>this</code> dans la fonction de rappel n'est pas défini ou se réfère à l'objet global.</p>
+<h4 id="exemple-avec-thisarg">Exemple avec <code>thisArg</code> :<a class="headerlink" href="#exemple-avec-thisarg" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><span class="kd">function</span><span class="w"> </span><span class="nx">multiply</span><span class="p">(</span><span class="nx">number</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nx">number</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">multiplier</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kd">let</span><span class="w"> </span><span class="nx">numbers</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="mf">2</span><span class="p">,</span><span class="w"> </span><span class="mf">3</span><span class="p">,</span><span class="w"> </span><span class="mf">4</span><span class="p">,</span><span class="w"> </span><span class="mf">5</span><span class="p">];</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">multiplierObject</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">multiplier</span><span class="o">:</span><span class="w"> </span><span class="mf">10</span><span class="w"> </span><span class="p">};</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">multipliedNumbers</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">numbers</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="nx">multiply</span><span class="p">,</span><span class="w"> </span><span class="nx">multiplierObject</span><span class="p">);</span>
+</code></pre></div>
+<p>Ici, la fonction <code>multiply</code> utilise <code>this.multiplier</code>. Lorsque <code>map()</code> est appelé, <code>multiplierObject</code> est passé comme <code>thisArg</code>, ce qui fait que <code>this</code> dans <code>multiply</code> se réfère à <code>multiplierObject</code>.</p>
+<h3 id="points-importants_1">Points Importants :<a class="headerlink" href="#points-importants_1" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Si la fonction de rappel est une fonction fléchée (<code>arrow function</code>), <code>thisArg</code> est ignoré car les fonctions fléchées n'ont pas leur propre contexte <code>this</code> ; elles le captent de leur contexte englobant.</li>
+<li><code>map()</code> est utilisée pour les transformations de données et renvoie un nouveau tableau sans modifier le tableau original.</li>
+<li><code>thisArg</code> est utile pour accéder à des objets ou des fonctions spécifiques dans la fonction de rappel sans avoir à les lier explicitement.</li>
+</ul>
+<p>En résumé, l'utilisation de <code>thisArg</code> avec <code>map()</code> permet de spécifier un contexte <code>this</code> pour la fonction de rappel, rendant la méthode <code>map()</code> adaptable et utile dans diverses situations de programmation.</p>
+<p>La fonction <code>map()</code> en JavaScript est une méthode très versatile utilisée pour créer un nouveau tableau en transformant chaque élément d'un tableau source. La fonction de rappel utilisée avec <code>map()</code> peut prendre jusqu'à trois arguments : l'élément en cours de traitement, son indice dans le tableau et le tableau lui-même. Ces arguments sont souvent notés comme <code>element</code>, <code>index</code> et <code>array</code>.</p>
+<p><br></p>
+<h2 id="utilisation-de-thisarg">utilisation de <code>thisArg</code><a class="headerlink" href="#utilisation-de-thisarg" title="Permanent link">&para;</a></h2>
+<p>L'utilisation de <code>thisArg</code> avec la méthode <code>map()</code> en JavaScript permet de définir le contexte (<code>this</code>) dans lequel la fonction de rappel est exécutée. Voici différentes façons d'utiliser <code>map()</code> avec <code>thisArg</code> :</p>
+<h3 id="1-acces-aux-proprietes-de-lobjet-dans-la-fonction-de-rappel">1. Accès aux Propriétés de l'Objet dans la Fonction de Rappel<a class="headerlink" href="#1-acces-aux-proprietes-de-lobjet-dans-la-fonction-de-rappel" title="Permanent link">&para;</a></h3>
+<p>Vous pouvez utiliser <code>thisArg</code> pour accéder aux propriétés d'un objet spécifique dans votre fonction de rappel.</p>
+<div class="highlight"><pre><span></span><code><span class="kd">function</span><span class="w"> </span><span class="nx">multiplyByMultiplier</span><span class="p">(</span><span class="nx">number</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nx">number</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">multiplier</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kd">const</span><span class="w"> </span><span class="nx">numbers</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="mf">2</span><span class="p">,</span><span class="w"> </span><span class="mf">3</span><span class="p">];</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">multiplierObj</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">multiplier</span><span class="o">:</span><span class="w"> </span><span class="mf">5</span><span class="w"> </span><span class="p">};</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">multipliedNumbers</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">numbers</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="nx">multiplyByMultiplier</span><span class="p">,</span><span class="w"> </span><span class="nx">multiplierObj</span><span class="p">);</span>
+<span class="c1">// multipliedNumbers = [5, 10, 15]</span>
+</code></pre></div>
+<p>Ici, <code>multiplyByMultiplier</code> utilise <code>this.multiplier</code> où <code>this</code> est lié à <code>multiplierObj</code> grâce à <code>thisArg</code>.</p>
+<h3 id="2-utilisation-dans-les-methodes-de-classe">2. Utilisation dans les Méthodes de Classe<a class="headerlink" href="#2-utilisation-dans-les-methodes-de-classe" title="Permanent link">&para;</a></h3>
+<p>Si vous travaillez avec des classes, <code>thisArg</code> peut être utilisé pour passer une instance de classe à la fonction de rappel.</p>
+<div class="highlight"><pre><span></span><code><span class="kd">class</span><span class="w"> </span><span class="nx">NumberProcessor</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kr">constructor</span><span class="p">(</span><span class="nx">factor</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="nx">factor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">factor</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="nx">multiply</span><span class="p">(</span><span class="nx">number</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="nx">number</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">factor</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kd">const</span><span class="w"> </span><span class="nx">processor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">NumberProcessor</span><span class="p">(</span><span class="mf">2</span><span class="p">);</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">numbers</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="mf">2</span><span class="p">,</span><span class="w"> </span><span class="mf">3</span><span class="p">];</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">processedNumbers</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">numbers</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="nx">processor</span><span class="p">.</span><span class="nx">multiply</span><span class="p">,</span><span class="w"> </span><span class="nx">processor</span><span class="p">);</span>
+<span class="c1">// processedNumbers = [2, 4, 6]</span>
+</code></pre></div>
+<h3 id="3-modification-du-comportement-de-la-fonction-de-rappel">3. Modification du Comportement de la Fonction de Rappel<a class="headerlink" href="#3-modification-du-comportement-de-la-fonction-de-rappel" title="Permanent link">&para;</a></h3>
+<p><code>thisArg</code> peut être utilisé pour changer le comportement de la fonction de rappel en fonction du contexte.</p>
+<div class="highlight"><pre><span></span><code><span class="kd">function</span><span class="w"> </span><span class="nx">addPrefix</span><span class="p">(</span><span class="nx">string</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">prefix</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">string</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kd">const</span><span class="w"> </span><span class="nx">strings</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;one&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;two&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;three&quot;</span><span class="p">];</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">context</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">prefix</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Number &quot;</span><span class="w"> </span><span class="p">};</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">prefixedStrings</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">strings</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="nx">addPrefix</span><span class="p">,</span><span class="w"> </span><span class="nx">context</span><span class="p">);</span>
+<span class="c1">// prefixedStrings = [&quot;Number one&quot;, &quot;Number two&quot;, &quot;Number three&quot;]</span>
+</code></pre></div>
+<h3 id="4-utilisation-avec-des-objets-litteraux">4. Utilisation avec des Objets Littéraux<a class="headerlink" href="#4-utilisation-avec-des-objets-litteraux" title="Permanent link">&para;</a></h3>
+<p>Vous pouvez passer un objet littéral comme <code>thisArg</code> pour accéder à ses propriétés dans la fonction de rappel.</p>
+<div class="highlight"><pre><span></span><code><span class="kd">function</span><span class="w"> </span><span class="nx">calculatePercentage</span><span class="p">(</span><span class="nx">value</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nx">value</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">total</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">100</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kd">const</span><span class="w"> </span><span class="nx">values</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="mf">20</span><span class="p">,</span><span class="w"> </span><span class="mf">30</span><span class="p">,</span><span class="w"> </span><span class="mf">50</span><span class="p">];</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">totalObj</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">total</span><span class="o">:</span><span class="w"> </span><span class="mf">100</span><span class="w"> </span><span class="p">};</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">percentages</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">values</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="nx">calculatePercentage</span><span class="p">,</span><span class="w"> </span><span class="nx">totalObj</span><span class="p">);</span>
+<span class="c1">// percentages = [20, 30, 50]</span>
+</code></pre></div>
+<h3 id="points-importants_2">Points Importants :<a class="headerlink" href="#points-importants_2" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Si vous utilisez des fonctions fléchées comme fonctions de rappel, <code>thisArg</code> est ignoré car les fonctions fléchées n'ont pas leur propre <code>this</code>. Elles capturent <code>this</code> de leur contexte englobant.</li>
+<li><code>thisArg</code> est utile lorsque vous voulez que la fonction de rappel ait accès à des propriétés ou des méthodes d'un objet spécifique.</li>
+<li><code>map()</code> crée toujours un nouveau tableau et ne modifie pas le tableau original.</li>
+</ul>
+<p>Ces exemples montrent comment <code>thisArg</code> peut être utilisé pour personnaliser le contexte d'exécution de la fonction de rappel dans <code>map()</code>, ce qui rend cette méthode encore plus flexible et puissante pour manipuler des tableaux.</p>
+<p><br></p>
+<h2 id="utilisation-de-index-et-array">Utilisation de <code>index</code> et <code>array</code> :<a class="headerlink" href="#utilisation-de-index-et-array" title="Permanent link">&para;</a></h2>
+<p>L'utilisation des paramètres <code>index</code> et <code>array</code> dans la fonction de rappel de <code>map()</code> offre une flexibilité supplémentaire pour des transformations plus complexes.</p>
+<h4 id="utilisation-de-index">Utilisation de <code>index</code> :<a class="headerlink" href="#utilisation-de-index" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Modification Basée sur l'Indice :</strong> Vous pouvez utiliser l'indice de l'élément pour effectuer des calculs ou des transformations qui dépendent de la position de l'élément dans le tableau.</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">numbers</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="mf">10</span><span class="p">,</span><span class="w"> </span><span class="mf">20</span><span class="p">,</span><span class="w"> </span><span class="mf">30</span><span class="p">,</span><span class="w"> </span><span class="mf">40</span><span class="p">];</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">indexedNumbers</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">numbers</span><span class="p">.</span><span class="nx">map</span><span class="p">((</span><span class="nx">num</span><span class="p">,</span><span class="w"> </span><span class="nx">index</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">num</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nx">index</span><span class="p">);</span>
+<span class="c1">// indexedNumbers est [0, 20, 60, 120]</span>
+</code></pre></div>
+<p>Ici, chaque élément est multiplié par son indice dans le tableau.</p>
+<h4 id="utilisation-de-array">Utilisation de <code>array</code> :<a class="headerlink" href="#utilisation-de-array" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Accès au Tableau Complet :</strong> La référence au tableau complet permet d'effectuer des opérations qui peuvent nécessiter une vue d'ensemble du tableau, comme des comparaisons avec d'autres éléments.</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">numbers</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="mf">2</span><span class="p">,</span><span class="w"> </span><span class="mf">3</span><span class="p">,</span><span class="w"> </span><span class="mf">4</span><span class="p">,</span><span class="w"> </span><span class="mf">5</span><span class="p">];</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">average</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">numbers</span><span class="p">.</span><span class="nx">map</span><span class="p">((</span><span class="nx">num</span><span class="p">,</span><span class="w"> </span><span class="nx">index</span><span class="p">,</span><span class="w"> </span><span class="nx">arr</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">num</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="p">(</span><span class="nx">arr</span><span class="p">.</span><span class="nx">reduce</span><span class="p">((</span><span class="nx">a</span><span class="p">,</span><span class="w"> </span><span class="nx">b</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">a</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">b</span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="nx">arr</span><span class="p">.</span><span class="nx">length</span><span class="p">));</span>
+<span class="c1">// average calcule la différence de chaque élément par rapport à la moyenne</span>
+</code></pre></div>
+<p>Dans cet exemple, la différence entre chaque nombre et la moyenne du tableau est calculée.</p>
+<h3 id="points-importants_3">Points Importants :<a class="headerlink" href="#points-importants_3" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>map()</code> est non destructrice : elle ne modifie pas le tableau original, mais renvoie un nouveau tableau.</li>
+<li>L'utilisation de <code>index</code> et <code>array</code> n'est pas toujours nécessaire, mais elle offre des options supplémentaires pour des transformations plus sophistiquées.</li>
+<li><code>map()</code> est idéale pour les opérations qui transforment chaque élément d'un tableau de manière indépendante, mais avec l'accès à l'indice et au tableau complet, elle peut gérer des cas plus complexes.</li>
+</ul>
+<p>En résumé, la méthode <code>map()</code> avec ses arguments <code>element</code>, <code>index</code> et <code>array</code> fournit une méthode puissante et flexible pour créer de nouveaux tableaux en transformant les éléments d'un tableau existant.</p>
+<p><br></p>
+<hr>
+
+<p>La méthode <code>map()</code> en JavaScript est fréquemment utilisée pour transformer les éléments d'un tableau. En plus de l'élément actuellement traité, <code>map()</code> peut également recevoir l'indice de l'élément (<code>index</code>) et le tableau complet sur lequel la méthode est appelée (<code>array</code>) comme arguments de la fonction de rappel. Ces arguments supplémentaires offrent une flexibilité accrue pour les transformations complexes. Voici plusieurs utilisations de <code>map()</code> en tirant parti de <code>index</code> et <code>array</code> :</p>
+<h3 id="1-utilisation-de-index">1. Utilisation de <code>index</code> :<a class="headerlink" href="#1-utilisation-de-index" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p><strong>Création d'un Tableau de Chaînes Incluant l'Indice :</strong>
+  <div class="highlight"><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">fruits</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="s1">&#39;apple&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;banana&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;cherry&#39;</span><span class="p">];</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">fruitWithIndex</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">fruits</span><span class="p">.</span><span class="nx">map</span><span class="p">((</span><span class="nx">fruit</span><span class="p">,</span><span class="w"> </span><span class="nx">index</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="sb">`</span><span class="si">${</span><span class="nx">index</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mf">1</span><span class="si">}</span><span class="sb">: </span><span class="si">${</span><span class="nx">fruit</span><span class="si">}</span><span class="sb">`</span><span class="p">);</span>
+<span class="c1">// fruitWithIndex = [&quot;1: apple&quot;, &quot;2: banana&quot;, &quot;3: cherry&quot;]</span>
+</code></pre></div></p>
+</li>
+<li>
+<p><strong>Calcul Basé sur l'Indice (par exemple, pour un Algorithme Mathématique) :</strong>
+  <div class="highlight"><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">numbers</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="mf">6</span><span class="p">,</span><span class="w"> </span><span class="mf">7</span><span class="p">,</span><span class="w"> </span><span class="mf">8</span><span class="p">,</span><span class="w"> </span><span class="mf">9</span><span class="p">];</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">indexedCalculation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">numbers</span><span class="p">.</span><span class="nx">map</span><span class="p">((</span><span class="nx">num</span><span class="p">,</span><span class="w"> </span><span class="nx">index</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">num</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nx">index</span><span class="p">);</span>
+<span class="c1">// indexedCalculation = [0, 7, 16, 27]</span>
+</code></pre></div></p>
+</li>
+</ul>
+<h3 id="2-utilisation-de-array">2. Utilisation de <code>array</code> :<a class="headerlink" href="#2-utilisation-de-array" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p><strong>Accès au Tableau Entier pour des Calculs Basés sur d'autres Éléments :</strong>
+  <div class="highlight"><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">numbers</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="mf">2</span><span class="p">,</span><span class="w"> </span><span class="mf">3</span><span class="p">,</span><span class="w"> </span><span class="mf">4</span><span class="p">];</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">percentages</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">numbers</span><span class="p">.</span><span class="nx">map</span><span class="p">((</span><span class="nx">num</span><span class="p">,</span><span class="w"> </span><span class="nx">index</span><span class="p">,</span><span class="w"> </span><span class="nx">arr</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">num</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="nx">arr</span><span class="p">.</span><span class="nx">reduce</span><span class="p">((</span><span class="nx">a</span><span class="p">,</span><span class="w"> </span><span class="nx">b</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">a</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">b</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">100</span><span class="p">);</span>
+<span class="c1">// percentages = [10, 20, 30, 40] (pourcentages de la somme totale)</span>
+</code></pre></div></p>
+</li>
+<li>
+<p><strong>Utilisation de <code>array</code> pour des Comparaisons ou des Conditions :</strong>
+  <div class="highlight"><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">numbers</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="mf">15</span><span class="p">,</span><span class="w"> </span><span class="mf">30</span><span class="p">,</span><span class="w"> </span><span class="mf">45</span><span class="p">];</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">isLargest</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">numbers</span><span class="p">.</span><span class="nx">map</span><span class="p">((</span><span class="nx">num</span><span class="p">,</span><span class="w"> </span><span class="nx">index</span><span class="p">,</span><span class="w"> </span><span class="nx">arr</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">num</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="nb">Math</span><span class="p">.</span><span class="nx">max</span><span class="p">(...</span><span class="nx">arr</span><span class="p">));</span>
+<span class="c1">// isLargest = [false, false, true]</span>
+</code></pre></div></p>
+</li>
+</ul>
+<h3 id="3-combinant-index-et-array">3. Combinant <code>index</code> et <code>array</code> :<a class="headerlink" href="#3-combinant-index-et-array" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p><strong>Création d'Éléments de Liste HTML avec Index et Longueur Totale :</strong>
+  <div class="highlight"><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">items</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="s1">&#39;Item1&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Item2&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Item3&#39;</span><span class="p">];</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">listItems</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">items</span><span class="p">.</span><span class="nx">map</span><span class="p">((</span><span class="nx">item</span><span class="p">,</span><span class="w"> </span><span class="nx">index</span><span class="p">,</span><span class="w"> </span><span class="nx">arr</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="sb">`&lt;li&gt;</span><span class="si">${</span><span class="nx">item</span><span class="si">}</span><span class="sb"> (</span><span class="si">${</span><span class="nx">index</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mf">1</span><span class="si">}</span><span class="sb"> of </span><span class="si">${</span><span class="nx">arr</span><span class="p">.</span><span class="nx">length</span><span class="si">}</span><span class="sb">)&lt;/li&gt;`</span><span class="p">);</span>
+<span class="c1">// listItems = [&quot;&lt;li&gt;Item1 (1 of 3)&lt;/li&gt;&quot;, &quot;&lt;li&gt;Item2 (2 of 3)&lt;/li&gt;&quot;, &quot;&lt;li&gt;Item3 (3 of 3)&lt;/li&gt;&quot;]</span>
+</code></pre></div></p>
+</li>
+<li>
+<p><strong>Construction de Tableaux de Données pour des Visualisations :</strong>
+  <div class="highlight"><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">dataPoints</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="mf">100</span><span class="p">,</span><span class="w"> </span><span class="mf">200</span><span class="p">,</span><span class="w"> </span><span class="mf">300</span><span class="p">];</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">graphPoints</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">dataPoints</span><span class="p">.</span><span class="nx">map</span><span class="p">((</span><span class="nx">point</span><span class="p">,</span><span class="w"> </span><span class="nx">index</span><span class="p">,</span><span class="w"> </span><span class="nx">arr</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">x</span><span class="o">:</span><span class="w"> </span><span class="nx">index</span><span class="p">,</span>
+<span class="w">        </span><span class="nx">y</span><span class="o">:</span><span class="w"> </span><span class="nx">point</span><span class="p">,</span>
+<span class="w">        </span><span class="nx">percentageOfTotal</span><span class="o">:</span><span class="w"> </span><span class="nx">point</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="nx">arr</span><span class="p">.</span><span class="nx">reduce</span><span class="p">((</span><span class="nx">a</span><span class="p">,</span><span class="w"> </span><span class="nx">b</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">a</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">b</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">100</span>
+<span class="w">    </span><span class="p">};</span>
+<span class="p">});</span>
+<span class="c1">// graphPoints = [{ x: 0, y: 100, percentageOfTotal: ... }, ...]</span>
+</code></pre></div></p>
+</li>
+</ul>
+<p>Ces exemples démontrent la polyvalence de <code>map()</code> lorsqu'elle est utilisée avec ses arguments supplémentaires, permettant des transformations complexes et contextuelles qui vont au-delà de simples modifications d'éléments individuels.</p>
+<p><br></p>
+<h2 id="combiner-lutilisation-de-lindice-et-du-tableau-entier">Combiner l'utilisation de l'Indice et du Tableau Entier<a class="headerlink" href="#combiner-lutilisation-de-lindice-et-du-tableau-entier" title="Permanent link">&para;</a></h2>
+<p>La méthode <code>map()</code> en JavaScript peut être utilisée de manière très créative en combinant les arguments <code>index</code> et <code>array</code> avec l'élément en cours de traitement. Cette approche permet de réaliser des transformations complexes sur les éléments du tableau en tenant compte de leur position ou en se référant à l'ensemble du tableau. Voici différentes manières d'utiliser <code>map()</code> en combinant <code>index</code> et <code>array</code> :</p>
+<h3 id="1-calculs-bases-sur-lindice-et-le-tableau-entier">1. Calculs Basés sur l'Indice et le Tableau Entier<a class="headerlink" href="#1-calculs-bases-sur-lindice-et-le-tableau-entier" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Calculer la Moyenne et la Soustraire de Chaque Élément :</strong>
+  <div class="highlight"><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">numbers</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="mf">2</span><span class="p">,</span><span class="w"> </span><span class="mf">3</span><span class="p">,</span><span class="w"> </span><span class="mf">4</span><span class="p">,</span><span class="w"> </span><span class="mf">5</span><span class="p">];</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">average</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">numbers</span><span class="p">.</span><span class="nx">reduce</span><span class="p">((</span><span class="nx">sum</span><span class="p">,</span><span class="w"> </span><span class="nx">num</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">sum</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">num</span><span class="p">,</span><span class="w"> </span><span class="mf">0</span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="nx">numbers</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">deviations</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">numbers</span><span class="p">.</span><span class="nx">map</span><span class="p">((</span><span class="nx">num</span><span class="p">,</span><span class="w"> </span><span class="nx">index</span><span class="p">,</span><span class="w"> </span><span class="nx">arr</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">num</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="nx">average</span><span class="p">);</span>
+</code></pre></div></li>
+</ul>
+<h3 id="2-acces-aux-elements-adjacents">2. Accès aux Éléments Adjacents<a class="headerlink" href="#2-acces-aux-elements-adjacents" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Créer un Tableau de Paires d'Éléments Adjacents :</strong>
+  <div class="highlight"><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">items</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;b&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;c&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;d&#39;</span><span class="p">];</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">pairs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">items</span><span class="p">.</span><span class="nx">map</span><span class="p">((</span><span class="nx">current</span><span class="p">,</span><span class="w"> </span><span class="nx">index</span><span class="p">,</span><span class="w"> </span><span class="nx">arr</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span>
+<span class="w">              </span><span class="nx">index</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="nx">arr</span><span class="p">.</span><span class="nx">length</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mf">1</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="p">[</span><span class="nx">current</span><span class="p">,</span><span class="w"> </span><span class="nx">arr</span><span class="p">[</span><span class="nx">index</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mf">1</span><span class="p">]]</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="kc">null</span><span class="p">)</span>
+<span class="w">              </span><span class="p">.</span><span class="nx">filter</span><span class="p">(</span><span class="nx">pair</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">pair</span><span class="w"> </span><span class="o">!==</span><span class="w"> </span><span class="kc">null</span><span class="p">);</span>
+</code></pre></div></li>
+</ul>
+<h3 id="3-utiliser-lindice-pour-des-operations-conditionnelles">3. Utiliser l'Indice pour des Opérations Conditionnelles<a class="headerlink" href="#3-utiliser-lindice-pour-des-operations-conditionnelles" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Marquer les Éléments Basés sur leur Position :</strong>
+  <div class="highlight"><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">items</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="s1">&#39;first&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;second&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;third&#39;</span><span class="p">];</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">markedItems</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">items</span><span class="p">.</span><span class="nx">map</span><span class="p">((</span><span class="nx">item</span><span class="p">,</span><span class="w"> </span><span class="nx">index</span><span class="p">,</span><span class="w"> </span><span class="nx">arr</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span>
+<span class="w">                    </span><span class="sb">`</span><span class="si">${</span><span class="nx">item</span><span class="si">}${</span><span class="nx">index</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="nx">arr</span><span class="p">.</span><span class="nx">length</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mf">1</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="s1">&#39; (last)&#39;</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;&#39;</span><span class="si">}</span><span class="sb">`</span><span class="p">);</span>
+</code></pre></div></li>
+</ul>
+<h3 id="4-creer-des-structures-de-donnees-complexes">4. Créer des Structures de Données Complexes<a class="headerlink" href="#4-creer-des-structures-de-donnees-complexes" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Construire un Objet avec des Informations Supplémentaires :</strong>
+  <div class="highlight"><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">numbers</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="mf">10</span><span class="p">,</span><span class="w"> </span><span class="mf">20</span><span class="p">,</span><span class="w"> </span><span class="mf">30</span><span class="p">];</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">detailedNumbers</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">numbers</span><span class="p">.</span><span class="nx">map</span><span class="p">((</span><span class="nx">num</span><span class="p">,</span><span class="w"> </span><span class="nx">index</span><span class="p">,</span><span class="w"> </span><span class="nx">arr</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">({</span>
+<span class="w">  </span><span class="nx">value</span><span class="o">:</span><span class="w"> </span><span class="nx">num</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">isEven</span><span class="o">:</span><span class="w"> </span><span class="nx">num</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="mf">2</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="mf">0</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">position</span><span class="o">:</span><span class="w"> </span><span class="nx">index</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">percentageOfTotal</span><span class="o">:</span><span class="w"> </span><span class="p">(</span><span class="nx">num</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="nx">arr</span><span class="p">.</span><span class="nx">reduce</span><span class="p">((</span><span class="nx">a</span><span class="p">,</span><span class="w"> </span><span class="nx">b</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">a</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">b</span><span class="p">))</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">100</span>
+<span class="p">}));</span>
+</code></pre></div></li>
+</ul>
+<h3 id="5-utiliser-lindice-pour-controler-la-transformation">5. Utiliser l'Indice pour Contrôler la Transformation<a class="headerlink" href="#5-utiliser-lindice-pour-controler-la-transformation" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Transformation Conditionnelle Basée sur l'Indice :</strong>
+  <div class="highlight"><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">names</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="s1">&#39;Alice&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Bob&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Charlie&#39;</span><span class="p">];</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">upperCasedOdd</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">names</span><span class="p">.</span><span class="nx">map</span><span class="p">((</span><span class="nx">name</span><span class="p">,</span><span class="w"> </span><span class="nx">index</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">index</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="mf">2</span><span class="w"> </span><span class="o">!==</span><span class="w"> </span><span class="mf">0</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="nx">name</span><span class="p">.</span><span class="nx">toUpperCase</span><span class="p">()</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="nx">name</span><span class="p">);</span>
+</code></pre></div></li>
+</ul>
+<h3 id="6-references-croisees-dans-le-tableau">6. Références Croisées dans le Tableau<a class="headerlink" href="#6-references-croisees-dans-le-tableau" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Comparaison de l'Élément Actuel avec d'Autres Éléments :</strong>
+  <div class="highlight"><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">numbers</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="mf">3</span><span class="p">,</span><span class="w"> </span><span class="mf">6</span><span class="p">,</span><span class="w"> </span><span class="mf">2</span><span class="p">,</span><span class="w"> </span><span class="mf">8</span><span class="p">,</span><span class="w"> </span><span class="mf">5</span><span class="p">];</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">greaterThanPrevious</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">numbers</span><span class="p">.</span><span class="nx">map</span><span class="p">((</span><span class="nx">num</span><span class="p">,</span><span class="w"> </span><span class="nx">index</span><span class="p">,</span><span class="w"> </span><span class="nx">arr</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span>
+<span class="w">                            </span><span class="nx">index</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="mf">0</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="kc">true</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="nx">num</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="nx">arr</span><span class="p">[</span><span class="nx">index</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mf">1</span><span class="p">]);</span>
+</code></pre></div></li>
+</ul>
+<p>Ces exemples montrent la flexibilité de la méthode <code>map()</code> lorsqu'elle est utilisée avec les arguments <code>index</code> et <code>array</code>. En ayant accès à l'indice de l'élément en cours de traitement et au tableau complet, vous pouvez effectuer des transformations sophistiquées et contextuelles qui vont au-delà de simples modifications d'éléments individuels.</p>
+<p><br></p>
+<h2 id="utilisation-combinee-de-thisarg-index-et-array">utilisation combinée de thisArg, index et array<a class="headerlink" href="#utilisation-combinee-de-thisarg-index-et-array" title="Permanent link">&para;</a></h2>
+<p>L'utilisation combinée de <code>thisArg</code>, <code>index</code> et <code>array</code> avec la méthode <code>map()</code> en JavaScript permet d'effectuer des transformations complexes sur un tableau, tout en ayant un contrôle précis sur le contexte d'exécution de la fonction de rappel. Voici quelques exemples illustrant diverses manières d'utiliser <code>map()</code> en combinant ces trois éléments :</p>
+<h3 id="1-utilisation-de-thisarg-pour-acceder-aux-proprietes-dun-objet">1. Utilisation de <code>thisArg</code> pour Accéder aux Propriétés d'un Objet :<a class="headerlink" href="#1-utilisation-de-thisarg-pour-acceder-aux-proprietes-dun-objet" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Transformer des Éléments en Utilisant une Propriété d'Objet :</strong>
+  <div class="highlight"><pre><span></span><code><span class="kd">function</span><span class="w"> </span><span class="nx">scaleNumber</span><span class="p">(</span><span class="nx">number</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nx">number</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">scaleFactor</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kd">const</span><span class="w"> </span><span class="nx">numbers</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="mf">2</span><span class="p">,</span><span class="w"> </span><span class="mf">3</span><span class="p">,</span><span class="w"> </span><span class="mf">4</span><span class="p">,</span><span class="w"> </span><span class="mf">5</span><span class="p">];</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">scaleContext</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">scaleFactor</span><span class="o">:</span><span class="w"> </span><span class="mf">10</span><span class="w"> </span><span class="p">};</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">scaledNumbers</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">numbers</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="nx">scaleNumber</span><span class="p">,</span><span class="w"> </span><span class="nx">scaleContext</span><span class="p">);</span>
+<span class="c1">// Résultat : [10, 20, 30, 40, 50]</span>
+</code></pre></div></li>
+</ul>
+<h3 id="2-utilisation-de-index-pour-des-transformations-basees-sur-la-position">2. Utilisation de <code>index</code> pour des Transformations Basées sur la Position :<a class="headerlink" href="#2-utilisation-de-index-pour-des-transformations-basees-sur-la-position" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Marquage des Éléments Basé sur leur Indice :</strong>
+  <div class="highlight"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">items</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="s1">&#39;item1&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;item2&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;item3&#39;</span><span class="p">];</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">markedItems</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">items</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">item</span><span class="p">,</span><span class="w"> </span><span class="nx">index</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="sb">`</span><span class="si">${</span><span class="nx">item</span><span class="si">}</span><span class="sb"> - Position: </span><span class="si">${</span><span class="nx">index</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mf">1</span><span class="si">}</span><span class="sb"> sur </span><span class="si">${</span><span class="k">this</span><span class="p">.</span><span class="nx">totalItems</span><span class="si">}</span><span class="sb">`</span><span class="p">;</span>
+<span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">totalItems</span><span class="o">:</span><span class="w"> </span><span class="nx">items</span><span class="p">.</span><span class="nx">length</span><span class="w"> </span><span class="p">});</span>
+<span class="c1">// Résultat : [&quot;item1 - Position: 1 sur 3&quot;, &quot;item2 - Position: 2 sur 3&quot;, ...]</span>
+</code></pre></div></li>
+</ul>
+<h3 id="3-utilisation-de-array-pour-des-comparaisons-ou-des-calculs-globaux">3. Utilisation de <code>array</code> pour des Comparaisons ou des Calculs Globaux :<a class="headerlink" href="#3-utilisation-de-array-pour-des-comparaisons-ou-des-calculs-globaux" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Calculs Impliquant le Tableau Entier :</strong>
+  <div class="highlight"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">numbers</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="mf">2</span><span class="p">,</span><span class="w"> </span><span class="mf">3</span><span class="p">,</span><span class="w"> </span><span class="mf">5</span><span class="p">,</span><span class="w"> </span><span class="mf">7</span><span class="p">,</span><span class="w"> </span><span class="mf">11</span><span class="p">];</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">percentages</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">numbers</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">number</span><span class="p">,</span><span class="w"> </span><span class="nx">index</span><span class="p">,</span><span class="w"> </span><span class="nx">arr</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">total</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">arr</span><span class="p">.</span><span class="nx">reduce</span><span class="p">((</span><span class="nx">acc</span><span class="p">,</span><span class="w"> </span><span class="nx">curr</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">acc</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">curr</span><span class="p">,</span><span class="w"> </span><span class="mf">0</span><span class="p">);</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="sb">`Number: </span><span class="si">${</span><span class="nx">number</span><span class="si">}</span><span class="sb">, Share: </span><span class="si">${</span><span class="p">(</span><span class="nx">number</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="nx">total</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">100</span><span class="p">).</span><span class="nx">toFixed</span><span class="p">(</span><span class="mf">2</span><span class="p">)</span><span class="si">}</span><span class="sb">%`</span><span class="p">;</span>
+<span class="p">});</span>
+<span class="c1">// Résultat : [&quot;Number: 2, Share: 6.67%&quot;, &quot;Number: 3, Share: 10.00%&quot;, ...]</span>
+</code></pre></div></li>
+</ul>
+<h3 id="4-combinaison-de-thisarg-index-et-array-pour-une-logique-complexe">4. Combinaison de <code>thisArg</code>, <code>index</code> et <code>array</code> pour une Logique Complexe :<a class="headerlink" href="#4-combinaison-de-thisarg-index-et-array-pour-une-logique-complexe" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Utilisation Complète des Trois Arguments pour une Logique Personnalisée :</strong>
+  <div class="highlight"><pre><span></span><code><span class="kd">function</span><span class="w"> </span><span class="nx">customTransform</span><span class="p">(</span><span class="nx">element</span><span class="p">,</span><span class="w"> </span><span class="nx">index</span><span class="p">,</span><span class="w"> </span><span class="nx">arr</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="sb">`Element: </span><span class="si">${</span><span class="nx">element</span><span class="si">}</span><span class="sb">, Scaled by: </span><span class="si">${</span><span class="k">this</span><span class="p">.</span><span class="nx">scaleFactor</span><span class="si">}</span><span class="sb">, Position: </span><span class="si">${</span><span class="nx">index</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mf">1</span><span class="si">}</span><span class="sb">, Total Elements: </span><span class="si">${</span><span class="nx">arr</span><span class="p">.</span><span class="nx">length</span><span class="si">}</span><span class="sb">`</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kd">const</span><span class="w"> </span><span class="nx">elements</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="mf">10</span><span class="p">,</span><span class="w"> </span><span class="mf">20</span><span class="p">,</span><span class="w"> </span><span class="mf">30</span><span class="p">];</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">transformContext</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">scaleFactor</span><span class="o">:</span><span class="w"> </span><span class="mf">2</span><span class="w"> </span><span class="p">};</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">transformedElements</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">elements</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="nx">customTransform</span><span class="p">,</span><span class="w"> </span><span class="nx">transformContext</span><span class="p">);</span>
+<span class="c1">// Résultat : [&quot;Element: 10, Scaled by: 2, Position: 1, Total Elements: 3&quot;, ...]</span>
+</code></pre></div></li>
+</ul>
+<p>Dans ces exemples, <code>thisArg</code> est utilisé pour fournir un contexte externe (comme un objet avec des propriétés spécifiques) à la fonction de rappel. L'argument <code>index</code> est utilisé pour accéder à la position actuelle de l'élément dans le tableau, et <code>array</code> est utilisé pour effectuer des opérations qui impliquent une vision globale du tableau, comme des calculs impliquant tous les éléments.</p>
+<p>Ces exemples montrent la flexibilité et la puissance de <code>map()</code> pour effectuer des transformations complexes sur des tableaux, tout en fournissant un contrôle fin sur le contexte et en accédant à des informations détaillées sur chaque élément et le tableau dans son ensemble.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  Retour en haut de la page
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+    <a href="https://github.com/aGrellard/documentations_linux" target="_blank" rel="noopener" title="dépôt github" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../../../..", "features": ["content.action.view", "navigation.instant", "navigation.tabs", "navigation.top", "toc.integrate", "header.autohide"], "search": "../../../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}}</script>
+    
+    
+      <script src="../../../../../assets/javascripts/bundle.ad660dcc.min.js"></script>
+      
+        <script src="../../../../../javascripts/config.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>
