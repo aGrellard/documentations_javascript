@@ -1,51 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-         <loc>https://agrellard.github.io/documentations_javascript/Infinity/</loc>
-         <lastmod>2024-06-23</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://agrellard.github.io/documentations_javascript/async_await/</loc>
-         <lastmod>2024-06-23</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://agrellard.github.io/documentations_javascript/fonctions_1/</loc>
-         <lastmod>2024-06-23</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://agrellard.github.io/documentations_javascript/fonctions_2/</loc>
-         <lastmod>2024-06-23</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://agrellard.github.io/documentations_javascript/lodash/</loc>
-         <lastmod>2024-06-23</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://agrellard.github.io/documentations_javascript/promise_VS_async/</loc>
-         <lastmod>2024-06-23</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://agrellard.github.io/documentations_javascript/promise_callback/</loc>
-         <lastmod>2024-06-23</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://agrellard.github.io/documentations_javascript/setTimeout/</loc>
-         <lastmod>2024-06-23</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://agrellard.github.io/documentations_javascript/window.onload_DOMContentLoaded/</loc>
-         <lastmod>2024-06-23</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
          <loc>https://agrellard.github.io/documentations_javascript/Array/Array_Method/</loc>
          <lastmod>2024-06-23</lastmod>
          <changefreq>daily</changefreq>
@@ -172,6 +127,51 @@
     </url>
     <url>
          <loc>https://agrellard.github.io/documentations_javascript/String/localCompare_2-fr/</loc>
+         <lastmod>2024-06-23</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://agrellard.github.io/documentations_javascript/a-trier/Infinity/</loc>
+         <lastmod>2024-06-23</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://agrellard.github.io/documentations_javascript/a-trier/async_await/</loc>
+         <lastmod>2024-06-23</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://agrellard.github.io/documentations_javascript/a-trier/fonctions_1/</loc>
+         <lastmod>2024-06-23</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://agrellard.github.io/documentations_javascript/a-trier/fonctions_2/</loc>
+         <lastmod>2024-06-23</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://agrellard.github.io/documentations_javascript/a-trier/lodash/</loc>
+         <lastmod>2024-06-23</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://agrellard.github.io/documentations_javascript/a-trier/promise_VS_async/</loc>
+         <lastmod>2024-06-23</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://agrellard.github.io/documentations_javascript/a-trier/promise_callback/</loc>
+         <lastmod>2024-06-23</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://agrellard.github.io/documentations_javascript/a-trier/setTimeout/</loc>
+         <lastmod>2024-06-23</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://agrellard.github.io/documentations_javascript/a-trier/window.onload_DOMContentLoaded/</loc>
          <lastmod>2024-06-23</lastmod>
          <changefreq>daily</changefreq>
     </url>

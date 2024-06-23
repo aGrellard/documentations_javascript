@@ -12,28 +12,28 @@
         <meta name="author" content="aGrellard">
       
       
-        <link rel="canonical" href="https://agrellard.github.io/documentations_javascript/promise_VS_async/">
+        <link rel="canonical" href="https://agrellard.github.io/documentations_javascript/a-trier/Infinity/">
       
       
-        <link rel="prev" href="../lodash/">
+        <link rel="prev" href="../../String/localCompare_2-fr/">
       
       
-        <link rel="next" href="../promise_callback/">
+        <link rel="next" href="../async_await/">
       
       
-      <link rel="icon" href="../assets/images/favicon.png">
+      <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.27">
     
     
       
-        <title>promise VS async - DocuLinux</title>
+        <title>Infinity - DocuLinux</title>
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.6543a935.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.6543a935.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -46,9 +46,9 @@
       
     
     
-      <link rel="stylesheet" href="../stylesheets/extra.css">
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
     
-    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -73,11 +73,6 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
-        
-        <a href="#fonction-asynchrone-async-function" class="md-skip">
-          Aller au contenu
-        </a>
-      
     </div>
     <div data-md-component="announce">
       
@@ -88,7 +83,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="En-tête">
-    <a href=".." title="DocuLinux" class="md-header__button md-logo" aria-label="DocuLinux" data-md-component="logo">
+    <a href="../.." title="DocuLinux" class="md-header__button md-logo" aria-label="DocuLinux" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M392.8 1.2c-17-4.9-34.7 5-39.6 22l-128 448c-4.9 17 5 34.7 22 39.6s34.7-5 39.6-22l128-448c4.9-17-5-34.7-22-39.6zm80.6 120.1c-12.5 12.5-12.5 32.8 0 45.3l89.3 89.4-89.4 89.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l112-112c12.5-12.5 12.5-32.8 0-45.3l-112-112c-12.5-12.5-32.8-12.5-45.3 0zm-306.7 0c-12.5-12.5-32.8-12.5-45.3 0l-112 112c-12.5 12.5-12.5 32.8 0 45.3l112 112c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256l89.4-89.4c12.5-12.5 12.5-32.8 0-45.3z"/></svg>
@@ -108,7 +103,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              promise VS async
+              Infinity
             
           </span>
         </div>
@@ -214,165 +209,10 @@
   
   
   
-    <li class="md-tabs__item">
-      <a href="../Infinity/" class="md-tabs__link">
-        
-  
-    
-  
-  Infinity
-
-      </a>
-    </li>
-  
-
-      
-        
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href="../async_await/" class="md-tabs__link">
-        
-  
-    
-  
-  async et await
-
-      </a>
-    </li>
-  
-
-      
-        
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href="../fonctions_1/" class="md-tabs__link">
-        
-  
-    
-  
-  Fonctions 1
-
-      </a>
-    </li>
-  
-
-      
-        
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href="../fonctions_2/" class="md-tabs__link">
-        
-  
-    
-  
-  Fonctions 2
-
-      </a>
-    </li>
-  
-
-      
-        
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href="../lodash/" class="md-tabs__link">
-        
-  
-    
-  
-  Lodash
-
-      </a>
-    </li>
-  
-
-      
-        
-  
-  
-    
-  
-  
-    <li class="md-tabs__item md-tabs__item--active">
-      <a href="./" class="md-tabs__link">
-        
-  
-    
-  
-  promise VS async
-
-      </a>
-    </li>
-  
-
-      
-        
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href="../promise_callback/" class="md-tabs__link">
-        
-  
-    
-  
-  Promise callback
-
-      </a>
-    </li>
-  
-
-      
-        
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href="../setTimeout/" class="md-tabs__link">
-        
-  
-    
-  
-  setTimeout
-
-      </a>
-    </li>
-  
-
-      
-        
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href="../window.onload_DOMContentLoaded/" class="md-tabs__link">
-        
-  
-    
-  
-  window.onload DOMContentLoaded
-
-      </a>
-    </li>
-  
-
-      
-        
-  
-  
-  
     
     
       <li class="md-tabs__item">
-        <a href="../Array/Array_Method/" class="md-tabs__link">
+        <a href="../../Array/Array_Method/" class="md-tabs__link">
           
   
   Array
@@ -390,10 +230,30 @@
     
     
       <li class="md-tabs__item">
-        <a href="../String/indexOf/" class="md-tabs__link">
+        <a href="../../String/indexOf/" class="md-tabs__link">
           
   
   String
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="./" class="md-tabs__link">
+          
+  
+  A trier
 
         </a>
       </li>
@@ -408,7 +268,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../fetch/fetch_description/" class="md-tabs__link">
+        <a href="../../fetch/fetch_description/" class="md-tabs__link">
           
   
   Fetch
@@ -426,7 +286,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../regexp/caracteres/" class="md-tabs__link">
+        <a href="../../regexp/caracteres/" class="md-tabs__link">
           
   
   Regexp
@@ -461,7 +321,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href=".." title="DocuLinux" class="md-nav__button md-logo" aria-label="DocuLinux" data-md-component="logo">
+    <a href="../.." title="DocuLinux" class="md-nav__button md-logo" aria-label="DocuLinux" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M392.8 1.2c-17-4.9-34.7 5-39.6 22l-128 448c-4.9 17 5 34.7 22 39.6s34.7-5 39.6-22l128-448c4.9-17-5-34.7-22-39.6zm80.6 120.1c-12.5 12.5-12.5 32.8 0 45.3l89.3 89.4-89.4 89.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l112-112c12.5-12.5 12.5-32.8 0-45.3l-112-112c-12.5-12.5-32.8-12.5-45.3 0zm-306.7 0c-12.5-12.5-32.8-12.5-45.3 0l-112 112c-12.5 12.5-12.5 32.8 0 45.3l112 112c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256l89.4-89.4c12.5-12.5 12.5-32.8 0-45.3z"/></svg>
@@ -490,249 +350,6 @@
   
   
   
-    <li class="md-nav__item">
-      <a href="../Infinity/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Infinity
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../async_await/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    async et await
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../fonctions_1/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Fonctions 1
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../fonctions_2/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Fonctions 2
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../lodash/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Lodash
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-    
-  
-  
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    promise VS async
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
-        
-  
-  <span class="md-ellipsis">
-    promise VS async
-  </span>
-  
-
-      </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table des matières
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#fonction-asynchrone-async-function" class="md-nav__link">
-    <span class="md-ellipsis">
-      Fonction Asynchrone (Async Function)
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#fonction-retournant-une-promesse" class="md-nav__link">
-    <span class="md-ellipsis">
-      Fonction Retournant une Promesse
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#conclusion" class="md-nav__link">
-    <span class="md-ellipsis">
-      Conclusion
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../promise_callback/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Promise callback
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../setTimeout/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    setTimeout
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../window.onload_DOMContentLoaded/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    window.onload DOMContentLoaded
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
     
     
     
@@ -744,10 +361,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
         
           
-          <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -758,8 +375,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_10">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
             <span class="md-nav__icon md-icon"></span>
             Array
           </label>
@@ -772,7 +389,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Array/Array_Method/" class="md-nav__link">
+      <a href="../../Array/Array_Method/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -793,7 +410,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Array/concat/" class="md-nav__link">
+      <a href="../../Array/concat/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -814,7 +431,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Array/every/" class="md-nav__link">
+      <a href="../../Array/every/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -835,7 +452,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Array/filter/" class="md-nav__link">
+      <a href="../../Array/filter/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -856,7 +473,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Array/find/" class="md-nav__link">
+      <a href="../../Array/find/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -877,7 +494,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Array/from/" class="md-nav__link">
+      <a href="../../Array/from/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -898,7 +515,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Array/indexOf/" class="md-nav__link">
+      <a href="../../Array/indexOf/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -919,7 +536,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Array/innerHTML/" class="md-nav__link">
+      <a href="../../Array/innerHTML/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -940,7 +557,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Array/map-2/" class="md-nav__link">
+      <a href="../../Array/map-2/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -961,7 +578,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Array/map/" class="md-nav__link">
+      <a href="../../Array/map/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -982,7 +599,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Array/reduce/" class="md-nav__link">
+      <a href="../../Array/reduce/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1003,7 +620,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Array/slice/" class="md-nav__link">
+      <a href="../../Array/slice/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1024,7 +641,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Array/some/" class="md-nav__link">
+      <a href="../../Array/some/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1045,7 +662,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Array/sort/" class="md-nav__link">
+      <a href="../../Array/sort/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1066,7 +683,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Array/splice/" class="md-nav__link">
+      <a href="../../Array/splice/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1087,7 +704,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Array/spread/" class="md-nav__link">
+      <a href="../../Array/spread/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1108,7 +725,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Array/tri_fusion/" class="md-nav__link">
+      <a href="../../Array/tri_fusion/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1139,10 +756,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10_18" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_18" >
         
           
-          <label class="md-nav__link" for="__nav_10_18" id="__nav_10_18_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_1_18" id="__nav_1_18_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -1153,8 +770,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_10_18_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_10_18">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_18_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_18">
             <span class="md-nav__icon md-icon"></span>
              atrier
           </label>
@@ -1177,10 +794,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10_18_1" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_18_1" >
         
           
-          <label class="md-nav__link" for="__nav_10_18_1" id="__nav_10_18_1_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_1_18_1" id="__nav_1_18_1_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -1191,8 +808,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_10_18_1_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_10_18_1">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_18_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_18_1">
             <span class="md-nav__icon md-icon"></span>
             Assets
           </label>
@@ -1215,10 +832,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10_18_1_1" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_18_1_1" >
         
           
-          <label class="md-nav__link" for="__nav_10_18_1_1" id="__nav_10_18_1_1_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_1_18_1_1" id="__nav_1_18_1_1_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -1229,8 +846,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_10_18_1_1_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_10_18_1_1">
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_1_18_1_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_18_1_1">
             <span class="md-nav__icon md-icon"></span>
             Js
           </label>
@@ -1243,7 +860,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Array/_atrier/assets/js/filter/" class="md-nav__link">
+      <a href="../../Array/_atrier/assets/js/filter/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1264,7 +881,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Array/_atrier/assets/js/map/" class="md-nav__link">
+      <a href="../../Array/_atrier/assets/js/map/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1285,7 +902,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Array/_atrier/assets/js/reduce/" class="md-nav__link">
+      <a href="../../Array/_atrier/assets/js/reduce/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1306,7 +923,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Array/_atrier/assets/js/sort/" class="md-nav__link">
+      <a href="../../Array/_atrier/assets/js/sort/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1327,7 +944,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Array/_atrier/assets/js/tri_fusion/" class="md-nav__link">
+      <a href="../../Array/_atrier/assets/js/tri_fusion/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1389,10 +1006,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
         
           
-          <label class="md-nav__link" for="__nav_11" id="__nav_11_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -1403,8 +1020,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_11_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_11">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             String
           </label>
@@ -1417,7 +1034,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../String/indexOf/" class="md-nav__link">
+      <a href="../../String/indexOf/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1438,7 +1055,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../String/localCompare/" class="md-nav__link">
+      <a href="../../String/localCompare/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1459,7 +1076,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../String/localCompare_2-en/" class="md-nav__link">
+      <a href="../../String/localCompare_2-en/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1480,7 +1097,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../String/localCompare_2-fr/" class="md-nav__link">
+      <a href="../../String/localCompare_2-fr/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1505,6 +1122,253 @@
       
   
   
+    
+  
+  
+  
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    A trier
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            A trier
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Infinity
+  </span>
+  
+
+      </a>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../async_await/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    async et await
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../fonctions_1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Fonctions 1
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../fonctions_2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Fonctions 2
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lodash/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lodash
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../promise_VS_async/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    promise VS async
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../promise_callback/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Promise callback
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../setTimeout/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    setTimeout
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../window.onload_DOMContentLoaded/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    window.onload DOMContentLoaded
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
   
   
     
@@ -1518,10 +1382,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_12" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
         
           
-          <label class="md-nav__link" for="__nav_12" id="__nav_12_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -1532,8 +1396,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_12_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_12">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
             Fetch
           </label>
@@ -1546,7 +1410,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../fetch/fetch_description/" class="md-nav__link">
+      <a href="../../fetch/fetch_description/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1567,7 +1431,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../fetch/fetch_methode/" class="md-nav__link">
+      <a href="../../fetch/fetch_methode/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1588,7 +1452,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../fetch/fetch_status/" class="md-nav__link">
+      <a href="../../fetch/fetch_status/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1609,7 +1473,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../fetch/fetch_utilisations/" class="md-nav__link">
+      <a href="../../fetch/fetch_utilisations/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1647,10 +1511,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_13" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
         
           
-          <label class="md-nav__link" for="__nav_13" id="__nav_13_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -1661,8 +1525,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_13_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_13">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
             Regexp
           </label>
@@ -1675,7 +1539,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../regexp/caracteres/" class="md-nav__link">
+      <a href="../../regexp/caracteres/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1696,7 +1560,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../regexp/guide/" class="md-nav__link">
+      <a href="../../regexp/guide/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1736,45 +1600,67 @@
     
       
     
-    <a href="https://github.com/aGrellard/documentations_javascript/raw/main/docs/promise_VS_async.md" title="Consulter la source de cette page" class="md-content__button md-icon">
+    <a href="https://github.com/aGrellard/documentations_javascript/raw/main/docs/a-trier/Infinity.md" title="Consulter la source de cette page" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0 8a5 5 0 0 1-5-5 5 5 0 0 1 5-5 5 5 0 0 1 5 5 5 5 0 0 1-5 5m0-12.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5Z"/></svg>
     </a>
   
 
 
-  <h1>promise VS async</h1>
+  <h1>Infinity</h1>
 
-<p><a href="https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise#description">mdn_promise</a></p>
-<hr>
-
-<p>La différence principale entre une fonction asynchrone déclarée avec <code>async function mafonction()</code> et une fonction qui retourne explicitement une nouvelle promesse avec <code>function mafonction() { return new Promise((resolve, reject) =&gt; {}) }</code> réside dans la syntaxe et la lisibilité du code, mais les deux approches ont le même objectif fondamental : gérer les opérations asynchrones.</p>
-<h3 id="fonction-asynchrone-async-function">Fonction Asynchrone (Async Function)<a class="headerlink" href="#fonction-asynchrone-async-function" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><span class="k">async</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="nx">mafonction</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="c1">// Logique asynchrone ici</span>
-<span class="p">}</span>
+<p><code>-Infinity</code> en JavaScript représente une valeur numérique qui est inférieure à toutes les autres valeurs numériques. En termes mathématiques, c'est l'équivalent de l'infini négatif. Voici quelques points clés pour comprendre <code>-Infinity</code> :</p>
+<ol>
+<li><strong>Définition :</strong></li>
+<li>
+<p><code>-Infinity</code> est une propriété globale qui représente une valeur inférieure à la limite la plus basse des nombres représentables en JavaScript.</p>
+</li>
+<li>
+<p><strong>Utilisation :</strong></p>
+</li>
+<li>
+<p>Elle est souvent utilisée dans des calculs qui nécessitent une initialisation avec une valeur extrêmement basse, par exemple, lors de la recherche de la valeur maximale dans un tableau de nombres. En commençant avec <code>-Infinity</code>, n'importe quel autre nombre rencontré sera plus grand.</p>
+</li>
+<li>
+<p><strong>Comparaison :</strong></p>
+</li>
+<li>Tout nombre comparé à <code>-Infinity</code> sera plus grand, sauf <code>-Infinity</code> lui-même.</li>
+<li>
+<p>Par exemple, <code>(-Infinity &lt; 0)</code> est <code>true</code> et <code>(-Infinity &lt; -1000000)</code> est également <code>true</code>.</p>
+</li>
+<li>
+<p><strong>Arithmétique :</strong></p>
+</li>
+<li>
+<p>Des opérations mathématiques impliquant <code>-Infinity</code> suivront les règles normales de l'arithmétique infinie. Par exemple, <code>(-Infinity + 1)</code> est toujours <code>-Infinity</code>.</p>
+</li>
+<li>
+<p><strong>Type :</strong></p>
+</li>
+<li>
+<p>Le type de <code>-Infinity</code>, selon l'opérateur <code>typeof</code>, est <code>'number'</code>. Cela signifie que <code>-Infinity</code> est considéré comme un nombre en JavaScript, bien qu'il représente une notion mathématique abstraite.</p>
+</li>
+<li>
+<p><strong>Overflow et Underflow :</strong></p>
+</li>
+<li>
+<p><code>-Infinity</code> peut également résulter d'un underflow, où une opération mathématique aboutit à un nombre plus petit que ce qui peut être représenté.</p>
+</li>
+<li>
+<p><strong>JSON :</strong></p>
+</li>
+<li>
+<p>Si vous encodez <code>-Infinity</code> en JSON en utilisant <code>JSON.stringify()</code>, il sera converti en <code>null</code>, car <code>Infinity</code> et <code>-Infinity</code> ne sont pas valides en JSON.</p>
+</li>
+<li>
+<p><strong>Vérification :</strong></p>
+</li>
+<li>Pour vérifier si une variable est <code>-Infinity</code>, utilisez l'égalité (<code>value === -Infinity</code>).</li>
+</ol>
+<div class="highlight"><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">-</span><span class="mf">1</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mf">0</span><span class="p">;</span><span class="w"> </span><span class="c1">// Résultat en -Infinity</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">x</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="o">-</span><span class="kc">Infinity</span><span class="p">);</span><span class="w"> </span><span class="c1">// true</span>
 </code></pre></div>
-<ul>
-<li><strong>Syntaxe simplifiée :</strong> L'utilisation du mot-clé <code>async</code> devant une fonction indique automatiquement que la fonction retournera une promesse.</li>
-<li><strong>Gestion des erreurs :</strong> Les erreurs peuvent être capturées avec des blocs <code>try...catch</code>.</li>
-<li><strong>Utilisation de <code>await</code> :</strong> Permet d'écrire du code asynchrone de manière plus lisible, presque comme s'il s'agissait de code synchrone. Le mot-clé <code>await</code> ne peut être utilisé que dans des fonctions asynchrones.</li>
-<li><strong>Retour implicite de promesse :</strong> Toute valeur retournée par une fonction asynchrone est automatiquement encapsulée dans une promesse. Si la fonction retourne une valeur non-promise, cette valeur est emballée dans une promesse résolue. Si la fonction lève une exception, elle retourne une promesse rejetée.</li>
-</ul>
-<h3 id="fonction-retournant-une-promesse">Fonction Retournant une Promesse<a class="headerlink" href="#fonction-retournant-une-promesse" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><span class="kd">function</span><span class="w"> </span><span class="nx">mafonction</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nb">Promise</span><span class="p">((</span><span class="nx">resolve</span><span class="p">,</span><span class="w"> </span><span class="nx">reject</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="c1">// Logique asynchrone ici</span>
-<span class="w">    </span><span class="p">});</span>
-<span class="p">}</span>
-</code></pre></div>
-<ul>
-<li><strong>Contrôle explicite :</strong> Vous créez explicitement une nouvelle promesse. Cela vous donne un contrôle plus direct sur la résolution et le rejet de la promesse.</li>
-<li><strong>Gestion des erreurs :</strong> Les erreurs doivent être gérées en rejetant la promesse (<code>reject</code>).</li>
-<li><strong>Polyvalence :</strong> Peut être utile dans des situations où vous devez convertir des opérations basées sur des callbacks en promesses.</li>
-<li><strong>Pas d’utilisation de <code>await</code> à l’intérieur :</strong> Dans ce contexte, vous ne pouvez pas utiliser <code>await</code> à l'intérieur de la fonction à moins que la fonction elle-même ne soit déclarée <code>async</code>.</li>
-</ul>
-<h3 id="conclusion">Conclusion<a class="headerlink" href="#conclusion" title="Permanent link">&para;</a></h3>
-<p>En pratique, les fonctions asynchrones (<code>async/await</code>) sont souvent préférées pour leur syntaxe plus claire et leur facilité de gestion des erreurs. Elles rendent le code asynchrone plus lisible et plus proche d’un style synchrone. Cependant, dans certains cas, notamment lors de la conversion de fonctions basées sur des callbacks en promesses, il peut être nécessaire de retourner explicitement une nouvelle promesse.</p>
+<p><code>-Infinity</code> est donc un concept important en JavaScript, surtout lors de la manipulation de calculs mathématiques et de comparaisons.</p>
 
 
 
@@ -1839,12 +1725,12 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "..", "features": ["content.action.view", "navigation.instant", "navigation.tabs", "navigation.top", "toc.integrate", "header.autohide"], "search": "../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["content.action.view", "navigation.instant", "navigation.tabs", "navigation.top", "toc.integrate", "header.autohide"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.ad660dcc.min.js"></script>
+      <script src="../../assets/javascripts/bundle.ad660dcc.min.js"></script>
       
-        <script src="../javascripts/config.js"></script>
+        <script src="../../javascripts/config.js"></script>
       
         <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
       
