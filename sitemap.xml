@@ -1,207 +1,207 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-         <loc>https://agrellard.github.io/documentations_linux/Infinity/</loc>
+         <loc>https://agrellard.github.io/documentations_javascript/Infinity/</loc>
          <lastmod>2024-06-23</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://agrellard.github.io/documentations_linux/async_await/</loc>
+         <loc>https://agrellard.github.io/documentations_javascript/async_await/</loc>
          <lastmod>2024-06-23</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://agrellard.github.io/documentations_linux/fonctions_1/</loc>
+         <loc>https://agrellard.github.io/documentations_javascript/fonctions_1/</loc>
          <lastmod>2024-06-23</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://agrellard.github.io/documentations_linux/fonctions_2/</loc>
+         <loc>https://agrellard.github.io/documentations_javascript/fonctions_2/</loc>
          <lastmod>2024-06-23</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://agrellard.github.io/documentations_linux/lodash/</loc>
+         <loc>https://agrellard.github.io/documentations_javascript/lodash/</loc>
          <lastmod>2024-06-23</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://agrellard.github.io/documentations_linux/promise_VS_async/</loc>
+         <loc>https://agrellard.github.io/documentations_javascript/promise_VS_async/</loc>
          <lastmod>2024-06-23</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://agrellard.github.io/documentations_linux/promise_callback/</loc>
+         <loc>https://agrellard.github.io/documentations_javascript/promise_callback/</loc>
          <lastmod>2024-06-23</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://agrellard.github.io/documentations_linux/setTimeout/</loc>
+         <loc>https://agrellard.github.io/documentations_javascript/setTimeout/</loc>
          <lastmod>2024-06-23</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://agrellard.github.io/documentations_linux/window.onload_DOMContentLoaded/</loc>
+         <loc>https://agrellard.github.io/documentations_javascript/window.onload_DOMContentLoaded/</loc>
          <lastmod>2024-06-23</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://agrellard.github.io/documentations_linux/Array/Array_Method/</loc>
+         <loc>https://agrellard.github.io/documentations_javascript/Array/Array_Method/</loc>
          <lastmod>2024-06-23</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://agrellard.github.io/documentations_linux/Array/concat/</loc>
+         <loc>https://agrellard.github.io/documentations_javascript/Array/concat/</loc>
          <lastmod>2024-06-23</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://agrellard.github.io/documentations_linux/Array/every/</loc>
+         <loc>https://agrellard.github.io/documentations_javascript/Array/every/</loc>
          <lastmod>2024-06-23</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://agrellard.github.io/documentations_linux/Array/filter/</loc>
+         <loc>https://agrellard.github.io/documentations_javascript/Array/filter/</loc>
          <lastmod>2024-06-23</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://agrellard.github.io/documentations_linux/Array/find/</loc>
+         <loc>https://agrellard.github.io/documentations_javascript/Array/find/</loc>
          <lastmod>2024-06-23</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://agrellard.github.io/documentations_linux/Array/from/</loc>
+         <loc>https://agrellard.github.io/documentations_javascript/Array/from/</loc>
          <lastmod>2024-06-23</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://agrellard.github.io/documentations_linux/Array/indexOf/</loc>
+         <loc>https://agrellard.github.io/documentations_javascript/Array/indexOf/</loc>
          <lastmod>2024-06-23</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://agrellard.github.io/documentations_linux/Array/innerHTML/</loc>
+         <loc>https://agrellard.github.io/documentations_javascript/Array/innerHTML/</loc>
          <lastmod>2024-06-23</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://agrellard.github.io/documentations_linux/Array/map-2/</loc>
+         <loc>https://agrellard.github.io/documentations_javascript/Array/map-2/</loc>
          <lastmod>2024-06-23</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://agrellard.github.io/documentations_linux/Array/map/</loc>
+         <loc>https://agrellard.github.io/documentations_javascript/Array/map/</loc>
          <lastmod>2024-06-23</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://agrellard.github.io/documentations_linux/Array/reduce/</loc>
+         <loc>https://agrellard.github.io/documentations_javascript/Array/reduce/</loc>
          <lastmod>2024-06-23</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://agrellard.github.io/documentations_linux/Array/slice/</loc>
+         <loc>https://agrellard.github.io/documentations_javascript/Array/slice/</loc>
          <lastmod>2024-06-23</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://agrellard.github.io/documentations_linux/Array/some/</loc>
+         <loc>https://agrellard.github.io/documentations_javascript/Array/some/</loc>
          <lastmod>2024-06-23</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://agrellard.github.io/documentations_linux/Array/sort/</loc>
+         <loc>https://agrellard.github.io/documentations_javascript/Array/sort/</loc>
          <lastmod>2024-06-23</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://agrellard.github.io/documentations_linux/Array/splice/</loc>
+         <loc>https://agrellard.github.io/documentations_javascript/Array/splice/</loc>
          <lastmod>2024-06-23</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://agrellard.github.io/documentations_linux/Array/spread/</loc>
+         <loc>https://agrellard.github.io/documentations_javascript/Array/spread/</loc>
          <lastmod>2024-06-23</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://agrellard.github.io/documentations_linux/Array/tri_fusion/</loc>
+         <loc>https://agrellard.github.io/documentations_javascript/Array/tri_fusion/</loc>
          <lastmod>2024-06-23</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://agrellard.github.io/documentations_linux/Array/_atrier/assets/js/filter/</loc>
+         <loc>https://agrellard.github.io/documentations_javascript/Array/_atrier/assets/js/filter/</loc>
          <lastmod>2024-06-23</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://agrellard.github.io/documentations_linux/Array/_atrier/assets/js/map/</loc>
+         <loc>https://agrellard.github.io/documentations_javascript/Array/_atrier/assets/js/map/</loc>
          <lastmod>2024-06-23</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://agrellard.github.io/documentations_linux/Array/_atrier/assets/js/reduce/</loc>
+         <loc>https://agrellard.github.io/documentations_javascript/Array/_atrier/assets/js/reduce/</loc>
          <lastmod>2024-06-23</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://agrellard.github.io/documentations_linux/Array/_atrier/assets/js/sort/</loc>
+         <loc>https://agrellard.github.io/documentations_javascript/Array/_atrier/assets/js/sort/</loc>
          <lastmod>2024-06-23</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://agrellard.github.io/documentations_linux/Array/_atrier/assets/js/tri_fusion/</loc>
+         <loc>https://agrellard.github.io/documentations_javascript/Array/_atrier/assets/js/tri_fusion/</loc>
          <lastmod>2024-06-23</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://agrellard.github.io/documentations_linux/String/indexOf/</loc>
+         <loc>https://agrellard.github.io/documentations_javascript/String/indexOf/</loc>
          <lastmod>2024-06-23</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://agrellard.github.io/documentations_linux/String/localCompare/</loc>
+         <loc>https://agrellard.github.io/documentations_javascript/String/localCompare/</loc>
          <lastmod>2024-06-23</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://agrellard.github.io/documentations_linux/String/localCompare_2-en/</loc>
+         <loc>https://agrellard.github.io/documentations_javascript/String/localCompare_2-en/</loc>
          <lastmod>2024-06-23</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://agrellard.github.io/documentations_linux/String/localCompare_2-fr/</loc>
+         <loc>https://agrellard.github.io/documentations_javascript/String/localCompare_2-fr/</loc>
          <lastmod>2024-06-23</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://agrellard.github.io/documentations_linux/fetch/fetch_description/</loc>
+         <loc>https://agrellard.github.io/documentations_javascript/fetch/fetch_description/</loc>
          <lastmod>2024-06-23</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://agrellard.github.io/documentations_linux/fetch/fetch_methode/</loc>
+         <loc>https://agrellard.github.io/documentations_javascript/fetch/fetch_methode/</loc>
          <lastmod>2024-06-23</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://agrellard.github.io/documentations_linux/fetch/fetch_status/</loc>
+         <loc>https://agrellard.github.io/documentations_javascript/fetch/fetch_status/</loc>
          <lastmod>2024-06-23</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://agrellard.github.io/documentations_linux/fetch/fetch_utilisations/</loc>
+         <loc>https://agrellard.github.io/documentations_javascript/fetch/fetch_utilisations/</loc>
          <lastmod>2024-06-23</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://agrellard.github.io/documentations_linux/regexp/caracteres/</loc>
+         <loc>https://agrellard.github.io/documentations_javascript/regexp/caracteres/</loc>
          <lastmod>2024-06-23</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://agrellard.github.io/documentations_linux/regexp/guide/</loc>
+         <loc>https://agrellard.github.io/documentations_javascript/regexp/guide/</loc>
          <lastmod>2024-06-23</lastmod>
          <changefreq>daily</changefreq>
     </url>
