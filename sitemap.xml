@@ -41,12 +41,12 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://agrellard.github.io/documentations_javascript/Array/map-2/</loc>
+         <loc>https://agrellard.github.io/documentations_javascript/Array/map-v1/</loc>
          <lastmod>2024-06-23</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://agrellard.github.io/documentations_javascript/Array/map/</loc>
+         <loc>https://agrellard.github.io/documentations_javascript/Array/map-v2/</loc>
          <lastmod>2024-06-23</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -82,31 +82,6 @@
     </url>
     <url>
          <loc>https://agrellard.github.io/documentations_javascript/Array/tri_fusion/</loc>
-         <lastmod>2024-06-23</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://agrellard.github.io/documentations_javascript/Array/_atrier/assets/js/filter/</loc>
-         <lastmod>2024-06-23</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://agrellard.github.io/documentations_javascript/Array/_atrier/assets/js/map/</loc>
-         <lastmod>2024-06-23</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://agrellard.github.io/documentations_javascript/Array/_atrier/assets/js/reduce/</loc>
-         <lastmod>2024-06-23</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://agrellard.github.io/documentations_javascript/Array/_atrier/assets/js/sort/</loc>
-         <lastmod>2024-06-23</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://agrellard.github.io/documentations_javascript/Array/_atrier/assets/js/tri_fusion/</loc>
          <lastmod>2024-06-23</lastmod>
          <changefreq>daily</changefreq>
     </url>
