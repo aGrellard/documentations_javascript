@@ -1,12 +1,12 @@
 # Fichier de configuration du site à personnaliser
 ### Configuration minimale
 site_name: DocuLinux # Nom du site <70 caractères, apparait dans l'onglet du navigateur 
-site_url: https://agrellard.github.io/documentations_linux/ # Adresse web principale de publication du site, à modifier au format https://votrePseudoGitHub.github.io/votreDepot/
+site_url: https://agrellard.github.io/documentations_javascript/ # Adresse web principale de publication du site, à modifier au format https://votrePseudoGitHub.github.io/votreDepot/
 
 ### Configuration du dépôt
 # Ajoute en haut à droite de chaque page du site, icône, nom et lien vers le dépot GitHub du projet.
-repo_url: https://github.com/aGrellard/documentations_linux
-repo_name: 'documentations_linux' # Personnalise le nom générique "GitHub" donné par défaut au lien vers le dépot GitHub du projet.
+repo_url: https://github.com/aGrellard/documentations_javascript
+repo_name: 'documentations_javascript' # Personnalise le nom générique "GitHub" donné par défaut au lien vers le dépot GitHub du projet.
 edit_uri: edit/main/docs/ # Complément au chemin pour aller depuis `repo_url:` jusqu'au répertoire `docs` ;
 # Ce qui permet avec MkDocs-Material d'ajouter un bouton (crayon) d'édition du code source.md d'une page du site depuis le navigateur
 # (edit => édition avec connexion | blob, tree => lecture anonyme)
@@ -91,9 +91,7 @@ markdown_extensions: # https://squidfunk.github.io/mkdocs-material/reference/abb
     - pymdownx.superfences          # Imbrication de blocs.
     - pymdownx.keys:                # Touches du clavier.  ++ctrl+d++
         separator: "\uff0b"
-    - pymdownx.emoji:               # Émojis  :boom:
-        emoji_index: !!python/name:materialx.emoji.twemoji
-        emoji_generator: !!python/name:materialx.emoji.to_svg
+    - pymdownx.emoji
     - pymdownx.arithmatex:          # Formules en LaTeX 
         generic: true
         smart_dollar: false
@@ -114,7 +112,7 @@ plugins:
 extra:
   social: # A personaliser...
     - icon: fontawesome/brands/github
-      link: https://github.com/aGrellard/documentations_linux
+      link: https://github.com/aGrellard/documentations_javascript
       name: dépôt github
 
 # Configuration de javascripts complémentaires
