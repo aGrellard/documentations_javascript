@@ -15,7 +15,7 @@ window.MathJax = {
 document$.subscribe(() => {
   MathJax.typesetPromise()
 })
-
+/*
 document.addEventListener("DOMContentLoaded", function() {
   // Sélectionne tous les toggles de la navigation
   var toggles = document.querySelectorAll('.md-nav__toggle');
@@ -35,3 +35,4 @@ document.addEventListener("DOMContentLoaded", function() {
   });
 });
 
+*/

@@ -1,178 +1,283 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
+         <loc>https://agrellard.github.io/documentations_javascript/</loc>
+         <lastmod>2024-07-01</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://agrellard.github.io/documentations_javascript/Array/Array_Method/</loc>
-         <lastmod>2024-06-23</lastmod>
+         <lastmod>2024-07-01</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://agrellard.github.io/documentations_javascript/Array/bonjour/</loc>
-         <lastmod>2024-06-23</lastmod>
+         <lastmod>2024-07-01</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://agrellard.github.io/documentations_javascript/Array/concat/</loc>
-         <lastmod>2024-06-23</lastmod>
+         <lastmod>2024-07-01</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://agrellard.github.io/documentations_javascript/Array/every/</loc>
-         <lastmod>2024-06-23</lastmod>
+         <lastmod>2024-07-01</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://agrellard.github.io/documentations_javascript/Array/filter/</loc>
-         <lastmod>2024-06-23</lastmod>
+         <lastmod>2024-07-01</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://agrellard.github.io/documentations_javascript/Array/find/</loc>
-         <lastmod>2024-06-23</lastmod>
+         <lastmod>2024-07-01</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://agrellard.github.io/documentations_javascript/Array/from/</loc>
-         <lastmod>2024-06-23</lastmod>
+         <lastmod>2024-07-01</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://agrellard.github.io/documentations_javascript/Array/indexOf/</loc>
-         <lastmod>2024-06-23</lastmod>
+         <lastmod>2024-07-01</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://agrellard.github.io/documentations_javascript/Array/innerHTML/</loc>
-         <lastmod>2024-06-23</lastmod>
+         <lastmod>2024-07-01</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://agrellard.github.io/documentations_javascript/Array/reduce/</loc>
-         <lastmod>2024-06-23</lastmod>
+         <lastmod>2024-07-01</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://agrellard.github.io/documentations_javascript/Array/slice/</loc>
-         <lastmod>2024-06-23</lastmod>
+         <lastmod>2024-07-01</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://agrellard.github.io/documentations_javascript/Array/some/</loc>
-         <lastmod>2024-06-23</lastmod>
+         <lastmod>2024-07-01</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://agrellard.github.io/documentations_javascript/Array/sort/</loc>
-         <lastmod>2024-06-23</lastmod>
+         <lastmod>2024-07-01</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://agrellard.github.io/documentations_javascript/Array/splice/</loc>
-         <lastmod>2024-06-23</lastmod>
+         <lastmod>2024-07-01</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://agrellard.github.io/documentations_javascript/Array/spread/</loc>
-         <lastmod>2024-06-23</lastmod>
+         <lastmod>2024-07-01</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://agrellard.github.io/documentations_javascript/Array/tri_fusion/</loc>
-         <lastmod>2024-06-23</lastmod>
+         <lastmod>2024-07-01</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://agrellard.github.io/documentations_javascript/String/indexOf/</loc>
-         <lastmod>2024-06-23</lastmod>
+         <lastmod>2024-07-01</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://agrellard.github.io/documentations_javascript/String/localCompare/</loc>
-         <lastmod>2024-06-23</lastmod>
+         <lastmod>2024-07-01</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://agrellard.github.io/documentations_javascript/String/localCompare_2-en/</loc>
-         <lastmod>2024-06-23</lastmod>
+         <lastmod>2024-07-01</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://agrellard.github.io/documentations_javascript/String/localCompare_2-fr/</loc>
-         <lastmod>2024-06-23</lastmod>
+         <lastmod>2024-07-01</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://agrellard.github.io/documentations_javascript/a-trier/Infinity/</loc>
-         <lastmod>2024-06-23</lastmod>
+         <lastmod>2024-07-01</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://agrellard.github.io/documentations_javascript/a-trier/async_await/</loc>
-         <lastmod>2024-06-23</lastmod>
+         <lastmod>2024-07-01</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://agrellard.github.io/documentations_javascript/a-trier/fonctions_1/</loc>
-         <lastmod>2024-06-23</lastmod>
+         <lastmod>2024-07-01</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://agrellard.github.io/documentations_javascript/a-trier/fonctions_2/</loc>
-         <lastmod>2024-06-23</lastmod>
+         <lastmod>2024-07-01</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://agrellard.github.io/documentations_javascript/a-trier/lodash/</loc>
-         <lastmod>2024-06-23</lastmod>
+         <lastmod>2024-07-01</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://agrellard.github.io/documentations_javascript/a-trier/promise_VS_async/</loc>
-         <lastmod>2024-06-23</lastmod>
+         <lastmod>2024-07-01</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://agrellard.github.io/documentations_javascript/a-trier/promise_callback/</loc>
-         <lastmod>2024-06-23</lastmod>
+         <lastmod>2024-07-01</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://agrellard.github.io/documentations_javascript/a-trier/setTimeout/</loc>
-         <lastmod>2024-06-23</lastmod>
+         <lastmod>2024-07-01</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://agrellard.github.io/documentations_javascript/a-trier/window.onload_DOMContentLoaded/</loc>
-         <lastmod>2024-06-23</lastmod>
+         <lastmod>2024-07-01</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://agrellard.github.io/documentations_javascript/exercices/array/template_1/ex_1/</loc>
+         <lastmod>2024-07-01</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://agrellard.github.io/documentations_javascript/exercices/array/template_1/ex_10/</loc>
+         <lastmod>2024-07-01</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://agrellard.github.io/documentations_javascript/exercices/array/template_1/ex_11/</loc>
+         <lastmod>2024-07-01</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://agrellard.github.io/documentations_javascript/exercices/array/template_1/ex_12/</loc>
+         <lastmod>2024-07-01</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://agrellard.github.io/documentations_javascript/exercices/array/template_1/ex_13/</loc>
+         <lastmod>2024-07-01</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://agrellard.github.io/documentations_javascript/exercices/array/template_1/ex_14/</loc>
+         <lastmod>2024-07-01</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://agrellard.github.io/documentations_javascript/exercices/array/template_1/ex_15/</loc>
+         <lastmod>2024-07-01</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://agrellard.github.io/documentations_javascript/exercices/array/template_1/ex_16/</loc>
+         <lastmod>2024-07-01</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://agrellard.github.io/documentations_javascript/exercices/array/template_1/ex_17/</loc>
+         <lastmod>2024-07-01</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://agrellard.github.io/documentations_javascript/exercices/array/template_1/ex_18/</loc>
+         <lastmod>2024-07-01</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://agrellard.github.io/documentations_javascript/exercices/array/template_1/ex_19/</loc>
+         <lastmod>2024-07-01</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://agrellard.github.io/documentations_javascript/exercices/array/template_1/ex_2/</loc>
+         <lastmod>2024-07-01</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://agrellard.github.io/documentations_javascript/exercices/array/template_1/ex_20/</loc>
+         <lastmod>2024-07-01</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://agrellard.github.io/documentations_javascript/exercices/array/template_1/ex_3/</loc>
+         <lastmod>2024-07-01</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://agrellard.github.io/documentations_javascript/exercices/array/template_1/ex_4/</loc>
+         <lastmod>2024-07-01</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://agrellard.github.io/documentations_javascript/exercices/array/template_1/ex_5/</loc>
+         <lastmod>2024-07-01</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://agrellard.github.io/documentations_javascript/exercices/array/template_1/ex_6/</loc>
+         <lastmod>2024-07-01</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://agrellard.github.io/documentations_javascript/exercices/array/template_1/ex_7/</loc>
+         <lastmod>2024-07-01</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://agrellard.github.io/documentations_javascript/exercices/array/template_1/ex_8/</loc>
+         <lastmod>2024-07-01</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://agrellard.github.io/documentations_javascript/exercices/array/template_1/ex_9/</loc>
+         <lastmod>2024-07-01</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://agrellard.github.io/documentations_javascript/fetch/fetch_description/</loc>
-         <lastmod>2024-06-23</lastmod>
+         <lastmod>2024-07-01</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://agrellard.github.io/documentations_javascript/fetch/fetch_methode/</loc>
-         <lastmod>2024-06-23</lastmod>
+         <lastmod>2024-07-01</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://agrellard.github.io/documentations_javascript/fetch/fetch_status/</loc>
-         <lastmod>2024-06-23</lastmod>
+         <lastmod>2024-07-01</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://agrellard.github.io/documentations_javascript/fetch/fetch_utilisations/</loc>
-         <lastmod>2024-06-23</lastmod>
+         <lastmod>2024-07-01</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://agrellard.github.io/documentations_javascript/regexp/caracteres/</loc>
-         <lastmod>2024-06-23</lastmod>
+         <lastmod>2024-07-01</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://agrellard.github.io/documentations_javascript/regexp/guide/</loc>
-         <lastmod>2024-06-23</lastmod>
+         <lastmod>2024-07-01</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>
